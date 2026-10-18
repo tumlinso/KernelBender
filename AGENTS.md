@@ -13,7 +13,7 @@ receive lanes and roles; local workers are optional bounded children of exactly
 one parent claim and never become first-class participants.
 <!-- project-control:end -->
 
-KernelBender is an independent repository for a future KDA-compatible skill focused on creative GPU kernel design. Keep this bootstrap lightweight. Do not assume a skill format, implementation architecture, dependency set, or integration API before the project has researched and agreed on one.
+KernelBender is an independent repository for a future KDA-compatible skill focused on creative GPU kernel design. Keep the implementation lightweight and follow the accepted instruction/reference design in `planning/kernelbender-bootstrap/DESIGN.md`. Keep evaluator-only material outside the installed skill and preserve existing KDA/CUDA execution boundaries.
 
 Prefer portable, upstream-compatible work and small reviewable changes. For kernel experiments, check correctness before performance and keep hypotheses, rationale, and measured evidence distinct. Include enough workload, environment, and method detail for others to interpret or reproduce results.
 

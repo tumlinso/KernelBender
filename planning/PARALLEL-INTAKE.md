@@ -13,3 +13,6 @@ No task acceptance criterion or evaluation requirement is removed.
 Candidate contexts receive only solver-visible contracts and legitimate sources,
 never evaluator notes or other-arm results. Native timing is controller-admitted
 and isolated. Root retains lifecycle, integration and final acceptance.
+
+Lanes use the existing checkout with native `parallel_safe` task scopes; no
+managed-worktree integration layer is needed for these disjoint file owners.

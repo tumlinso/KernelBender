@@ -31,7 +31,7 @@
         "forbidden_paths": []
       },
       "depends_on": [],
-      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/DESIGN.md, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md, planning/kernelbender-bootstrap/draft/skills/kernelbender/SKILL.md.\nAcceptance:\n- Adopt/refine the drafted entry, caller questions, need map and brief; preserve the existing repository/Task authority instructions.\n- The same agent remains in control: no new agent invocation, hidden optimization loop, mandatory brainstorming quota or compulsory profiling of nonexistent kernels.\n- The brief provides an actual construction and decisive next action; conventional routing and consequential unknowns are handled explicitly.\n- The role is a design intervention, not a replacement for the continuing CUDA skill or Atlas.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/DESIGN.md, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md, planning/kernelbender-bootstrap/draft/skills/kernelbender/SKILL.md.\nAcceptance:\n- Adopt/refine the drafted entry, caller questions, need map and brief; preserve the existing repository/Task authority instructions.\n- The same agent remains in control: no new agent invocation, hidden optimization loop, mandatory brainstorming quota or compulsory profiling of nonexistent kernels.\n- The brief provides an actual construction and decisive next action; conventional routing and consequential unknowns are handled explicitly.\n- The role is a design intervention, not a replacement for the continuing CUDA skill or Atlas.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.\nParallel intake: KB-ROOT establishes the caller contract in the existing checkout. KB-KNOWLEDGE and KB-EVALUATION then use disjoint parallel_safe scopes; root retains integration and acceptance.",
       "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
       "produced_artifacts": [
         {
@@ -63,7 +63,9 @@
             "AGENTS.md",
             "planning/kernelbender-bootstrap"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root reviewed KB-01 actual artifacts: preserved task contract; selective instruction/reference method; concrete lifetime-aware brief and decisive experiment; conventional routing; no hidden agents or new services. Dependent knowledge links supplied by KB-02."
         }
       ]
     },
@@ -129,7 +131,9 @@
             "skills/kernelbender/examples",
             "planning/kernelbender-bootstrap"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root reviewed all adopted paths and selected bitplane/ownership/lifetime/arithmetic/refinement constructions in detail. Target, numerical, public-access and historical-evidence limits preserved; scoped sources retained; ten bridges/four examples; portable skill validator passes. No copied evaluator notes or new controller."
         }
       ]
     },
@@ -641,7 +645,7 @@
           "id": "KB-ROOT",
           "role": "implementer",
           "workspace": {
-            "mode": "contract_split"
+            "mode": "exclusive"
           },
           "tasks": [
             "KB-01",
@@ -656,7 +660,7 @@
           "parent_lane_id": "KB-ROOT",
           "role": "implementer",
           "workspace": {
-            "mode": "contract_split"
+            "mode": "exclusive"
           },
           "tasks": [
             "KB-02",
@@ -668,7 +672,7 @@
           "parent_lane_id": "KB-ROOT",
           "role": "implementer",
           "workspace": {
-            "mode": "contract_split"
+            "mode": "exclusive"
           },
           "tasks": [
             "KB-04"
