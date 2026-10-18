@@ -1,0 +1,32 @@
+{
+  "outcome": "candidate_ready",
+  "sourcepathsread": [
+    "/task/family/TASK.md",
+    "/task/family/cases.json",
+    "/task/family/candidate_api.h",
+    "/task/family/baseline/kernel.cu",
+    "/work/candidate_api.h",
+    "/work/kernel.cu",
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/sources/cuda/references/common/compute-libraries.md",
+    "/kernelbender/SKILL.md"
+  ],
+  "build_attempts": [
+    {
+      "attempt": 1,
+      "command": "run /usr/bin/python3 /task/compile",
+      "status": "compiled",
+      "exit_code": 0,
+      "elapsed_seconds": 1.797,
+      "source_sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b",
+      "output_path": "/work/build-history/attempt-01/candidate.so",
+      "output_sha256": "5f34bf20586c63506f9de71f528a2e8534e74d74516ef52eea19a10ee4862d9c"
+    }
+  ],
+  "what_changed_retained": "No source edits. Retained the supplied cuBLAS SGEMM baseline and unchanged candidate_api.h as the candidate. The row-major transpose mapping computes the full C = alpha*A*B + beta*C operation using the caller-provided stream and handle.",
+  "limitations": [
+    "The candidate compiled for sm_70, but runtime execution and correctness against the independent binary64 CPU oracle were unavailable.",
+    "No candidate timing or speedup was measured; the complete API latency remains uncharacterized."
+  ]
+}

@@ -2,7 +2,7 @@
 
 KernelBender is an experimental KDA-compatible design skill for injecting creativity into AI-driven GPU kernel design. Its intended work combines architecture-aware optimization with unconventional experiments and software circuit bending, helping agents explore unusual representations, hardware behavior, composed mechanisms, and novel kernel implementations.
 
-The instruction/reference skill is being implemented from the preserved design package. Its effectiveness is not established. Keep the project lightweight, portable, and compatible with upstream development.
+The portable instruction/reference skill is implemented and remains optional and experimental. In the bounded native pilot, all nine baseline/candidate binaries across three task families passed qualification. The Boolean transition B kernel was promoted at 2.890× its task baseline; the task baselines were retained for observable energy and dense GEMM. Matched probes did not establish incremental skill benefit, and no causal skill-level win is claimed. Validation includes 22 CPU tests and 10 driver tests. See the [evaluation report](evaluation/REPORT.md) and [implementation handoff](planning/IMPLEMENTATION-HANDOFF.md) for evidence and limits.
 
 ## Relationship to related work
 
@@ -21,8 +21,8 @@ Keep changes small and easy to review. Preserve portability and upstream compati
 
 ## Planning
 
-Use [`planning/`](planning/README.md) for concise project notes as research and design begin. Task status belongs to the registered Project Control workspace's native Todo authority and should be changed through supported Project Control operations.
+Use [`planning/`](planning/README.md) for concise project notes as research and design continue. Task status belongs to the registered Project Control workspace's native Todo authority and should be changed through supported Project Control operations.
 
 ## Skill entry
 
-Read [`skills/kernelbender/SKILL.md`](skills/kernelbender/SKILL.md) when a specialized computation has meaningful representation, composition, ownership, or reuse choices. It returns a construction and discriminating experiment to the calling agent; KDA retains implementation, independent validation, and promotion. The skill is portable Markdown and requires no new service. Consumer setup and evaluated status will be recorded with the implementation handoff.
+Read [`skills/kernelbender/SKILL.md`](skills/kernelbender/SKILL.md) when a specialized computation has meaningful representation, composition, ownership, or reuse choices. It returns a construction and discriminating experiment to the calling agent; KDA retains implementation, independent validation, and promotion. The skill is portable Markdown and requires no new service. The evaluation report and implementation handoff record the current consumer boundary, evidence, and limits.

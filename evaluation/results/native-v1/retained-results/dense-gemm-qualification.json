@@ -1,0 +1,917 @@
+{
+  "baseline": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/dense-gemm/runs/kda-experiments/builds/baseline/a2c16a94f8c18da132e973baae4e07fd8ab94dc34447ae84f4da61285feab244/0ce7afef224b4253bc18cdfa897d983d/candidate.so",
+        "sha256": "d3584678d5b7c46e97df95f4a31ca45b4dfb79ac8c18e4e5db854ebed5085120"
+      }
+    ],
+    "binary_sha256_after": "d3584678d5b7c46e97df95f4a31ca45b4dfb79ac8c18e4e5db854ebed5085120",
+    "binary_sha256_before": "d3584678d5b7c46e97df95f4a31ca45b4dfb79ac8c18e4e5db854ebed5085120",
+    "build_fingerprint": "a2c16a94f8c18da132e973baae4e07fd8ab94dc34447ae84f4da61285feab244",
+    "candidate_id": "baseline",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.492883941999025,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "c7141c84-a3a6-4b15-bb31-64a3548bd39f",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-baseline-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/029-sanitize-dense-gemm-baseline-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/029-sanitize-dense-gemm-baseline-memcheck.stdout.txt",
+          "stdout_sha256": "cd920f2050ef4e6e4de9eb443cb6b59bc569772b7916dc58582a7357adcf4dea"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "c7141c84-a3a6-4b15-bb31-64a3548bd39f",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/foreground.stdout.txt",
+          "controller_stdout_sha256": "8b31f60a2d1e73ea8008a32a6739e7d0b4c3bbdee8d183ab1af68cdad5c83a4e",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/sanitizer/run/summary.json",
+          "summary_json_sha256": "b539ad898319237c484b6716cfe74e55a1ea515a8b37011c1c7f95eb1d7ff98f",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2f1ef654-a362-43da-bb98-62362bd47eb8/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "25b0296e829f468184265b4b0dff96f7",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/memcheck/validation-result.json",
+        "validation_result_sha256": "a3d6eb3442fcb8e43aa2269aa9f3ffa7ca43bd49f290a0b1db2dc90ce354b328"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 7.150720552999701,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "e25958d4-54f2-427b-a32e-48f1a0cb73dd",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-baseline-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/030-sanitize-dense-gemm-baseline-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/030-sanitize-dense-gemm-baseline-racecheck.stdout.txt",
+          "stdout_sha256": "799691bd841d8681f1bb4a7c650934c9009eafc06e9f02c4c95b68e869e185bd"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "e25958d4-54f2-427b-a32e-48f1a0cb73dd",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/foreground.stdout.txt",
+          "controller_stdout_sha256": "c411aebb4a776a7ff98b3667bd296986866c65e55fa316f8d30a8c9af484319d",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/sanitizer/run/summary.json",
+          "summary_json_sha256": "ecc2803195c7a6193c01921f75ef820d7ba61eb8c9a8173fd4c7a905bbdfd440",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/3437c8c2-ba73-4835-adda-6046fb0c2b6f/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "25b0296e829f468184265b4b0dff96f7",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/baseline/racecheck/validation-result.json",
+        "validation_result_sha256": "a3d6eb3442fcb8e43aa2269aa9f3ffa7ca43bd49f290a0b1db2dc90ce354b328"
+      }
+    ],
+    "snapshot_sha256": "1876fa58754bfdaef135620509feb57da25747b44b256cfd5a92dc6f5941bcf0",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "status": "qualified"
+  },
+  "candidate-a": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/dense-gemm/runs/kda-experiments/builds/candidate-a/df14402ec729f2e53c545055c48a7c0143c9e05b251b54ef8d4966ab99290626/cf33653e4d7a4975bad968d5e1bc89a0/candidate.so",
+        "sha256": "dd3a421ecf67ccc2262983c386f253e3749962ea348eeddccfa3fa7af7ac6120"
+      }
+    ],
+    "binary_sha256_after": "dd3a421ecf67ccc2262983c386f253e3749962ea348eeddccfa3fa7af7ac6120",
+    "binary_sha256_before": "dd3a421ecf67ccc2262983c386f253e3749962ea348eeddccfa3fa7af7ac6120",
+    "build_fingerprint": "df14402ec729f2e53c545055c48a7c0143c9e05b251b54ef8d4966ab99290626",
+    "candidate_id": "candidate-a",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.499792855000123,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "d6031441-7a2e-4ec5-9635-252d68102b87",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-candidate-a-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/031-sanitize-dense-gemm-candidate-a-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/031-sanitize-dense-gemm-candidate-a-memcheck.stdout.txt",
+          "stdout_sha256": "e6ca7ece45ee2d676847d5d628534f834344b0d386541905ba87573a88ebbbbb"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "d6031441-7a2e-4ec5-9635-252d68102b87",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/foreground.stdout.txt",
+          "controller_stdout_sha256": "786945e7071a93348b9322306abc757eee5e873e003c7358382b4786a8a45c76",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/sanitizer/run/summary.json",
+          "summary_json_sha256": "baea82222e3a0791913e638cf84c144f9143a94e0bd70ac5c6c1e9f93d3167f5",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/2403780f-a806-433f-8e65-a3604b699bf4/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "59d222e8c2e44a609301cfe7904bf73a",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/memcheck/validation-result.json",
+        "validation_result_sha256": "ec8b74df08e421b94164cf6cdb72b05c46271fe98a8619410c1a740aaf1d67f9"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 7.1395233839975845,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "9b9d749c-6bee-4231-a158-040d1f7bfa02",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-candidate-a-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/032-sanitize-dense-gemm-candidate-a-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/032-sanitize-dense-gemm-candidate-a-racecheck.stdout.txt",
+          "stdout_sha256": "f7a23e33527ba5fe0f038b7e5ce68095d95c9fab71cccdef65b68872a85a055f"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "9b9d749c-6bee-4231-a158-040d1f7bfa02",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/foreground.stdout.txt",
+          "controller_stdout_sha256": "f7264f01ee223c951e3840c0aeaa560a14580cbbf2fc8d4cdb4810fe050e4715",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/sanitizer/run/summary.json",
+          "summary_json_sha256": "06199d84b3126552ae52cc7697e86f58b492ed05a088bd20b77118fec5863d5e",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/ce377af4-1490-4616-a026-bde8b70fc3ce/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "59d222e8c2e44a609301cfe7904bf73a",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-a/racecheck/validation-result.json",
+        "validation_result_sha256": "ec8b74df08e421b94164cf6cdb72b05c46271fe98a8619410c1a740aaf1d67f9"
+      }
+    ],
+    "snapshot_sha256": "1876fa58754bfdaef135620509feb57da25747b44b256cfd5a92dc6f5941bcf0",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "status": "qualified"
+  },
+  "candidate-b": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/dense-gemm/runs/kda-experiments/builds/candidate-b/92d6f4fe8c745cf849e2b9412b1c19997054be511c0f532bb0b52e36c6a9bca0/a929627f7ac94b1cad596289f8e75a01/candidate.so",
+        "sha256": "3360bd7c014d8c30c1331c51c35c7f2c91ed84f865e77dae6af856e440da677b"
+      }
+    ],
+    "binary_sha256_after": "3360bd7c014d8c30c1331c51c35c7f2c91ed84f865e77dae6af856e440da677b",
+    "binary_sha256_before": "3360bd7c014d8c30c1331c51c35c7f2c91ed84f865e77dae6af856e440da677b",
+    "build_fingerprint": "92d6f4fe8c745cf849e2b9412b1c19997054be511c0f532bb0b52e36c6a9bca0",
+    "candidate_id": "candidate-b",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.518102924001141,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "2ca9eb03-3361-4e90-9c55-b537bc0183be",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-candidate-b-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/033-sanitize-dense-gemm-candidate-b-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/033-sanitize-dense-gemm-candidate-b-memcheck.stdout.txt",
+          "stdout_sha256": "d966bfb575374620079453ebba62cffcea6d56f5026f0b4c9df0af0959aff5b9"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "2ca9eb03-3361-4e90-9c55-b537bc0183be",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/foreground.stdout.txt",
+          "controller_stdout_sha256": "b1d03ba2a9c1f82a0f90a02e66548ef3501f7891d16f8156d16221ebd763301a",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/sanitizer/run/summary.json",
+          "summary_json_sha256": "bed5544545bfed9b28a3a00a0298a21cbe5c51d69d884defe8d11091cc795ae8",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/e63768e8-226f-4ba2-a019-d29e942fee87/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "b73048e274564d77bc956857ed601eee",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/memcheck/validation-result.json",
+        "validation_result_sha256": "b5068f1ff5736c006b4c8d61faa5f65fe5b2bcabd2cfdeb4f6cec51af5b09468"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 6.965569415999198,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "e91c53c9-f8f9-4bb5-8f16-c2ce7dbc3ce0",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-dense-gemm-candidate-b-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/034-sanitize-dense-gemm-candidate-b-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/034-sanitize-dense-gemm-candidate-b-racecheck.stdout.txt",
+          "stdout_sha256": "217249ad7de9a3d5d0e18e5f3f9aa85d198119756659f95da758c3dd2f943221"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "e91c53c9-f8f9-4bb5-8f16-c2ce7dbc3ce0",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/foreground.stdout.txt",
+          "controller_stdout_sha256": "cc7d785bb9434dfccf1fbf815acfb023b64d2cf7f7d2892431c71c12532e43a2",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family dense-gemm --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/sanitizer/run/summary.json",
+          "summary_json_sha256": "51e07c916e26d5ddc362d998e101cd95368bd2667b04529cf233c44e130c818d",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fdb12f79-135c-4476-b166-cc2c7508d735/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "rectangular": "pass",
+            "square": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "square",
+                "status": "pass",
+                "workload_sha256": "f0250751bbb6ba1a68943bbf6895299b27a63d977b3900a5c907733f09fc2d6c"
+              },
+              {
+                "case_id": "rectangular",
+                "status": "pass",
+                "workload_sha256": "3b3a5afd535813dc610c175d444259f62ed077aa305fadaa0b23eae7c8472507"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "b73048e274564d77bc956857ed601eee",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/dense-gemm/candidate-b/racecheck/validation-result.json",
+        "validation_result_sha256": "b5068f1ff5736c006b4c8d61faa5f65fe5b2bcabd2cfdeb4f6cec51af5b09468"
+      }
+    ],
+    "snapshot_sha256": "1876fa58754bfdaef135620509feb57da25747b44b256cfd5a92dc6f5941bcf0",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      }
+    ],
+    "status": "qualified"
+  }
+}

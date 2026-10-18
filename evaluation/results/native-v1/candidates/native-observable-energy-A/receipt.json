@@ -1,0 +1,35 @@
+{
+  "outcome": "candidate_ready",
+  "sourcepathsread": [
+    "/task/family/TASK.md",
+    "/task/family/cases.json",
+    "/task/family/candidate_api.h",
+    "/work/kernel.cu (baseline contents before replacement)",
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md"
+  ],
+  "build_attempts": [
+    {
+      "attempt": 1,
+      "command": "/usr/bin/python3 /task/compile",
+      "status": "compiled",
+      "exit_code": 0,
+      "elapsed_seconds": 1.854,
+      "architecture": "sm_70",
+      "source_sha256": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8",
+      "output_sha256": "9771f96d5cfe4c060802e98d1bbbc60510a77555c8fb3898a775248b0acb8db9",
+      "header_sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6",
+      "archive": "/work/build-history/attempt-01/candidate.so"
+    }
+  ],
+  "whatchanged": [
+    "Replaced the direct SGEMM plus response-matrix reduction baseline with a fused direct energy path and a per-call Gram reuse path.",
+    "Added arithmetic-count-based dispatch and direct fallback when the optional cuBLAS handle is null.",
+    "Kept candidate_api.h unchanged."
+  ],
+  "limitations": [
+    "No GPU correctness execution was available; the fixed numerical tolerance is not validated.",
+    "No runtime or performance measurement was available; the operation-count crossover is an unmeasured hypothesis.",
+    "The build validates source compilation and linking only."
+  ]
+}

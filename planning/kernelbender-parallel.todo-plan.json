@@ -449,7 +449,9 @@
             "runs",
             "planning/kernelbender-bootstrap"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root and independent researcher reviewed completed r4: all9 implementations qualified,18 controller memcheck/racecheck receipts target exit0 and clean raw tool-specific summaries; all independent public/private validators pass. Exact 878 run-local and159 external artifact identities verify; Boolean B task-local promotion2.890x, energy and dense baselines retained. All7 successful compile attempts and3 pre-workload harness failures preserved. Single pair/family; no skill-level benefit claimed, no independent repeat/ablation and no default promotion. Generic racecheck classifier limitation explicitly recorded. Required execution gate passed626343ac-d69a-423f-9a10-053161d7b126."
         },
         {
           "id": "KB-06-NATIVE-PILOT",
@@ -500,7 +502,9 @@
           "planning/IMPLEMENTATION-HANDOFF.md",
           "evaluation/REPORT.md",
           "AGENTS.md",
-          "planning/README.md"
+          "planning/README.md",
+          ".gitignore",
+          "evaluation/results/native-v1/INDEPENDENT-REVIEW.md"
         ],
         "read_paths": [
           "planning/kernelbender-bootstrap",
@@ -570,9 +574,15 @@
             "tests",
             "planning/IMPLEMENTATION-HANDOFF.md",
             "evaluation/REPORT.md",
-            "planning/kernelbender-bootstrap"
+            "planning/kernelbender-bootstrap",
+            "AGENTS.md",
+            "planning/README.md",
+            ".gitignore",
+            "evaluation/results/native-v1/INDEPENDENT-REVIEW.md"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root accepts implemented portable instruction/reference package with runtime tree unchanged from frozen25b4b16, exact tested evaluator7ed9908, versioned compact evidence and seven compile sources. Actual native pilot and independent review support optional explicit experimental status, not a skill-level benefit claim. Skill metadata and package/source/CPU checks pass. Handoff specifies exact nested KDA path, tests and preserved execution authority. Local bulky controller artifacts ignored; no license invented."
         }
       ]
     },

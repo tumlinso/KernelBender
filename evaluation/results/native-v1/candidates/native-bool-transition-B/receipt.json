@@ -1,0 +1,57 @@
+{
+  "outcome": "candidate_ready",
+  "sourcepathsread": [
+    "/task/family/TASK.md",
+    "/task/family/cases.json",
+    "/task/family/candidate_api.h",
+    "/work/kernel.cu",
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/kernelbender/SKILL.md",
+    "/kernelbender/references/need-map.md",
+    "/kernelbender/references/bridges/bitplanes.md",
+    "/kernelbender/references/architecture.md",
+    "/kernelbender/references/experiments.md"
+  ],
+  "build_attempts": {
+    "limit": 2,
+    "used": 2,
+    "attempts": [
+      {
+        "command": "run /usr/bin/python3 /task/compile",
+        "status": "compiled_then_superseded",
+        "exit_code": 0,
+        "elapsed_seconds": 1.171,
+        "archived_source": "/work/build-history/attempt-01/kernel.cu",
+        "archived_output": "/work/build-history/attempt-01/candidate.so",
+        "source_sha256": "c5a2dfcc707dd85baf57eec429ec5bc451156684bc429f4f6b4b67d71ac271b8",
+        "output_sha256": "d64f6d3690bf18ef8e1f1bce5af1e1ac42a1f14b7c83c76046e59aa2ef19d89a",
+        "note": "Source review found shared rule storage sized for 16 entries although the contract has 32; this artifact is not the final candidate."
+      },
+      {
+        "command": "run /usr/bin/python3 /task/compile",
+        "status": "compiled",
+        "exit_code": 0,
+        "elapsed_seconds": 1.165,
+        "archived_source": "/work/build-history/attempt-02/kernel.cu",
+        "archived_output": "/work/build-history/attempt-02/candidate.so",
+        "header_sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0",
+        "source_sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702",
+        "output_sha256": "fc9a37f4a5e6f7a6687d04b8569a60f96fa4e15ded263f62862be3fd22ec426d"
+      }
+    ]
+  },
+  "whatchanged": [
+    "Uses a 32-byte shared copy of the per-call rule table.",
+    "For N <= 1024, performs the full epoch in one CTA with shared-memory state buffers and a final count reduction.",
+    "For larger inputs within the 40 KiB dynamic shared-memory bound, fuses 256-site tiles with a steps-wide left halo, periodic load wrapping, and per-tile count accumulation.",
+    "Retains a conventional per-step fallback when the fused tile exceeds the shared-memory bound.",
+    "Keeps candidate_api.h unchanged."
+  ],
+  "limitations": [
+    "No GPU/runtime access was available; runtime correctness and performance were not measured.",
+    "The corrected candidate compiled for the helper's SM70 target only; buildability does not establish runtime behavior.",
+    "Held-out shapes and independent evaluator correctness checks remain unrun.",
+    "Performance advantage over the baseline remains a hypothesis."
+  ]
+}

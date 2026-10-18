@@ -1,0 +1,479 @@
+{
+  "candidate_count": 6,
+  "candidates": [
+    {
+      "arm": "A",
+      "build_attempt_count": 1,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0",
+          "source_sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa",
+          "status": "compiled"
+        }
+      ],
+      "family": "bool-transition",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/source/kernel.cu",
+          "sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/source/candidate_api.h",
+          "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/source/manifest.json",
+          "sha256": "49d9ebfc358ffe7312fd76f3965acbccb875a0a52190811e52e48309e304f36f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/design.md",
+          "sha256": "5930241f3ec6d90c8e7028cc14245273d5b09200e5a4945344f18fd303d51742"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/receipt.json",
+          "sha256": "51f7bd6c949dbca494811308f0a0d7b142334ff0b6c5b1926211f7a0d0f731f8"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/commands.jsonl",
+          "sha256": "17cfc879e5399f23fa6b0691a0c1ae12e4c559f99580117ebb1ad6d51a4c3380"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/build-history/attempt-01/kernel.cu",
+          "sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-A/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-A/work/build-history/attempt-01/result.json",
+          "sha256": "b6e68d818805a3fd340e3a9eb706df30865d1ce5248fc8c8ebaadf997e16ffe8"
+        }
+      ],
+      "id": "native-bool-transition-A"
+    },
+    {
+      "arm": "B",
+      "build_attempt_count": 2,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0",
+          "source_sha256": "c5a2dfcc707dd85baf57eec429ec5bc451156684bc429f4f6b4b67d71ac271b8",
+          "status": "compiled"
+        },
+        {
+          "attempt": "attempt-02",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0",
+          "source_sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702",
+          "status": "compiled"
+        }
+      ],
+      "family": "bool-transition",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/source/kernel.cu",
+          "sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/source/candidate_api.h",
+          "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/source/manifest.json",
+          "sha256": "49d9ebfc358ffe7312fd76f3965acbccb875a0a52190811e52e48309e304f36f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/design.md",
+          "sha256": "4a073a716434d834d609a5cdab4e88960449498d757dd7d6f270c5346f858420"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/receipt.json",
+          "sha256": "aa6e3ae4bfae31dc9bfaa82f2b41dd7a13a0814e50aeac35b9a755851abdd40b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/commands.jsonl",
+          "sha256": "6504dbc4d41a0bb0908928f4ee9ffc7fced8d59f3ce623cc9c49ec79233a6e3d"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-01/kernel.cu",
+          "sha256": "c5a2dfcc707dd85baf57eec429ec5bc451156684bc429f4f6b4b67d71ac271b8"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-01/result.json",
+          "sha256": "e68edd2535cd4969169fa301377839a80647f58ccbf7fb7334b8579f4cfec21e"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-02/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-02/kernel.cu",
+          "sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-02/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-02/candidate_api.h",
+          "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-02/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-02/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-02/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-02/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-bool-transition-B/build-attempts/attempt-02/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-bool-transition-B/work/build-history/attempt-02/result.json",
+          "sha256": "d657e94e0e5914395fa632c8c39f82faf53ab979a3497be9df38985a94c01076"
+        }
+      ],
+      "id": "native-bool-transition-B"
+    },
+    {
+      "arm": "A",
+      "build_attempt_count": 1,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6",
+          "source_sha256": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8",
+          "status": "compiled"
+        }
+      ],
+      "family": "observable-energy",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/source/kernel.cu",
+          "sha256": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/source/candidate_api.h",
+          "sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/source/manifest.json",
+          "sha256": "49d9ebfc358ffe7312fd76f3965acbccb875a0a52190811e52e48309e304f36f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/design.md",
+          "sha256": "74fd17f35c49ad03b40e45bc6476d7c7c0b0de2acf28be6f1edfa32406a536ca"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/receipt.json",
+          "sha256": "7b5e68a3fb87a3639d3ca43dd2067bb86787e48d3f92e0a7102f1b1e4f9d84a3"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/commands.jsonl",
+          "sha256": "ddfe684c12208fd906bdad5682d517f502ce0eb46a1342e6dc330e401fa4f1dd"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/build-history/attempt-01/kernel.cu",
+          "sha256": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-A/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-A/work/build-history/attempt-01/result.json",
+          "sha256": "1323c58f64b5017fdf83ae534a5bcd0dfb4dbf645dd2476388933ba462a4e1e3"
+        }
+      ],
+      "id": "native-observable-energy-A"
+    },
+    {
+      "arm": "B",
+      "build_attempt_count": 1,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6",
+          "source_sha256": "6cd943b4c5c463b2f170212453cf1993cd7b19406780270693b5c22f951f3985",
+          "status": "compiled"
+        }
+      ],
+      "family": "observable-energy",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/source/kernel.cu",
+          "sha256": "6cd943b4c5c463b2f170212453cf1993cd7b19406780270693b5c22f951f3985"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/source/candidate_api.h",
+          "sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/source/manifest.json",
+          "sha256": "569677686058479014859611f7a6e4c785a0205641f26604f92aaa2f6dc29d1e"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/design.md",
+          "sha256": "76fee4f9e3191fefc0f0dce30dafe8fab4102715acddfc7303923ce37f2cefb5"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/receipt.json",
+          "sha256": "b473ee5965287082ccc4afec6f00c52c42ab7086b7644e591e0979360e83e30e"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/commands.jsonl",
+          "sha256": "3b0ae8b53f82a331f84271cb1b77bcb5511ac47af3667d2c1f8184d73505c4f2"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/build-history/attempt-01/kernel.cu",
+          "sha256": "6cd943b4c5c463b2f170212453cf1993cd7b19406780270693b5c22f951f3985"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-observable-energy-B/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-observable-energy-B/work/build-history/attempt-01/result.json",
+          "sha256": "18fdf6e6e4c2df7111ebeb8fb3259621582e45b93bb594614c2276e89048d689"
+        }
+      ],
+      "id": "native-observable-energy-B"
+    },
+    {
+      "arm": "A",
+      "build_attempt_count": 1,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec",
+          "source_sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b",
+          "status": "compiled"
+        }
+      ],
+      "family": "dense-gemm",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/source/kernel.cu",
+          "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/source/candidate_api.h",
+          "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/source/manifest.json",
+          "sha256": "569677686058479014859611f7a6e4c785a0205641f26604f92aaa2f6dc29d1e"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/design.md",
+          "sha256": "249fac2d65ec70c0a79377de87d3e1f28b2f381015fc96cf89512416c331bd4b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/receipt.json",
+          "sha256": "c922ab6a6cc9e680c8c2cddf583c1e52cc28ea72ad33d569c24e14ec29d3aa0f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/commands.jsonl",
+          "sha256": "803df7c59cd11455b723fb9b8c051618a0d9bec298ef6c5d3cbbc0f509fde9bc"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/build-history/attempt-01/kernel.cu",
+          "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-A/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-A/work/build-history/attempt-01/result.json",
+          "sha256": "43862cdfaa09a9fb310426d9f021216ee60828e0c14f786bcf61a40645ea9bf9"
+        }
+      ],
+      "id": "native-dense-gemm-A"
+    },
+    {
+      "arm": "B",
+      "build_attempt_count": 1,
+      "build_attempts": [
+        {
+          "attempt": "attempt-01",
+          "binary_exported": false,
+          "exit_code": 0,
+          "header_sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec",
+          "source_sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b",
+          "status": "compiled"
+        }
+      ],
+      "family": "dense-gemm",
+      "files": [
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/source/kernel.cu",
+          "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/source/candidate_api.h",
+          "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/manifest.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/source/manifest.json",
+          "sha256": "49d9ebfc358ffe7312fd76f3965acbccb875a0a52190811e52e48309e304f36f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/design.md",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/design.md",
+          "sha256": "eb222fc2227a92a8921c4011cc3ffadcce232a93d1c4c767a312f03a96615479"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/receipt.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/receipt.json",
+          "sha256": "4cdf8f450bf1436f8f6879c20bc080ceb35210d4697f0555313a136e289c3e8f"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/commands.jsonl",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/commands.jsonl",
+          "sha256": "8098819c0a73b164e34bf8b433ad37a55e2ca2ab21cc20dfc322d22276244ed3"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/build-attempts/attempt-01/kernel.cu",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/build-history/attempt-01/kernel.cu",
+          "sha256": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/build-attempts/attempt-01/candidate_api.h",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/build-history/attempt-01/candidate_api.h",
+          "sha256": "432bfe344faf606670f20d652416e5271f27f2d1a746b94f0f8fd8959ec86fec"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/build-attempts/attempt-01/stdout.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/build-history/attempt-01/stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/build-attempts/attempt-01/stderr.txt",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/build-history/attempt-01/stderr.txt",
+          "sha256": "4a9039e3453232c01f7268ec2cf78f30738e225eb22be0155616a8713600c863"
+        },
+        {
+          "export_path": "evaluation/results/native-v1/candidates/native-dense-gemm-B/build-attempts/attempt-01/result.json",
+          "original_path": "runs/kernelbender-pilot/agent-trials-v1/native-dense-gemm-B/work/build-history/attempt-01/result.json",
+          "sha256": "6f0c2889aba70df8537c996025ee2354217b2d99e354ffd9945a04cba5a37b36"
+        }
+      ],
+      "id": "native-dense-gemm-B"
+    }
+  ],
+  "excluded_binary_artifacts": "candidate.so files were not exported",
+  "schema_version": 1,
+  "source_root": "runs/kernelbender-pilot/agent-trials-v1"
+}

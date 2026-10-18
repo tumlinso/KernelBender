@@ -1,0 +1,33 @@
+{
+  "outcome": "candidate_ready",
+  "sourcepathsread": [
+    "/task/family/TASK.md",
+    "/task/family/cases.json",
+    "/task/family/candidate_api.h",
+    "/work/kernel.cu (provided baseline, then replaced)",
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/sources/cuda/references/architectures/volta/v100_atlas/mechanisms/M06-ballot-transpose-and-bit-sliced-state.md",
+    "/sources/cuda/references/architectures/volta/v100_atlas/compositions/C02-ballot-transpose-as-a-persistent-state-encoding.md"
+  ],
+  "build_attempts": [
+    {
+      "attempt": 1,
+      "command": "run /usr/bin/python3 /task/compile",
+      "status": "compiled",
+      "target": "sm_70",
+      "source_sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa",
+      "output_sha256": "b1241b3fdcfab57d5ef303730657fa7af1dfc51433dfc403f022123acbaf558f"
+    }
+  ],
+  "whatchanged": [
+    "Replaced per-step launches for steps 1 through 128 with a direct or shared-memory tiled epoch kernel.",
+    "Fused final-state counting into the output kernel and handled periodic halos and tile tails.",
+    "Kept a scalar ping-pong fallback for longer epochs and preserved the public API header."
+  ],
+  "limitations": [
+    "No GPU runtime was available; candidate output correctness was not executed against an oracle.",
+    "No timing or memory-use measurements were available, so no performance claim is made.",
+    "Only the sm_70 CPU-side CUDA build was attempted; held-out runtime cases remain unverified."
+  ]
+}

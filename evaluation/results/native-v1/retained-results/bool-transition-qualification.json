@@ -1,0 +1,1025 @@
+{
+  "baseline": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/bool-transition/runs/kda-experiments/builds/baseline/db1eb2dda004e0b16c393444e8dcc95b0454a49f5d71e3083504fd62136b2774/8f3c306293ee416aa65167ecbb8572a3/candidate.so",
+        "sha256": "a2dc5a390de09431a35b396e8f4c0353e6e66cd2a8e5e6f46ccf307728919b7b"
+      }
+    ],
+    "binary_sha256_after": "a2dc5a390de09431a35b396e8f4c0353e6e66cd2a8e5e6f46ccf307728919b7b",
+    "binary_sha256_before": "a2dc5a390de09431a35b396e8f4c0353e6e66cd2a8e5e6f46ccf307728919b7b",
+    "build_fingerprint": "db1eb2dda004e0b16c393444e8dcc95b0454a49f5d71e3083504fd62136b2774",
+    "candidate_id": "baseline",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 4.886185080002178,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "9908f7d6-222d-466a-b345-24ac86002299",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-baseline-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/015-sanitize-bool-transition-baseline-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/015-sanitize-bool-transition-baseline-memcheck.stdout.txt",
+          "stdout_sha256": "2bb7006879daf101cb64eaf338c6c149044299484c1373076dae2d02b2699172"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "9908f7d6-222d-466a-b345-24ac86002299",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/foreground.stdout.txt",
+          "controller_stdout_sha256": "1cd53fdd4c33e376dc8ae546155f66171617e21257ed601b8135df9b29321baa",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/sanitizer/run/summary.json",
+          "summary_json_sha256": "38559df83f9aca1f8167d7e16f4eca5b56afe5fe57c6ad2955c60e0756780a39",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/fe1b47d7-4559-45e0-a2ef-f08251e48158/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "ff40393a11c143e88a7a66f07dafb9bf",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/memcheck/validation-result.json",
+        "validation_result_sha256": "97deb95414324027b33f49c63f76f51fcd36fd4324e8695db87d6af524589128"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.396548015996814,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "a3eb76f6-3e8c-4456-9585-544c391fedbe",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-baseline-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/016-sanitize-bool-transition-baseline-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/016-sanitize-bool-transition-baseline-racecheck.stdout.txt",
+          "stdout_sha256": "8cdd56c051558fb10bffe61bceb7f814659060c0353ddc351321ef80079f7059"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "a3eb76f6-3e8c-4456-9585-544c391fedbe",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/foreground.stdout.txt",
+          "controller_stdout_sha256": "b4c254b0d212acb445f76c030b0206947bb68f8415a48eea389a33de58015acf",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/sanitizer/run/summary.json",
+          "summary_json_sha256": "be1279309535d5c8c0444451144bfd7f0ea02c26f4144942e4ce2c84bf92ec52",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/bd32f9ab-bfd9-4cb0-9699-549fc0e1e147/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "ff40393a11c143e88a7a66f07dafb9bf",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/baseline/racecheck/validation-result.json",
+        "validation_result_sha256": "97deb95414324027b33f49c63f76f51fcd36fd4324e8695db87d6af524589128"
+      }
+    ],
+    "snapshot_sha256": "e6c6c975595dcf2d0ec759d7c771b5bcfb101b017d5897c09ed8c5f63608a7cd",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "04d7efaf9a6f69fc09e897e97e2911c7f590a9f970e38da954aefbb12d7eabf4"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "04d7efaf9a6f69fc09e897e97e2911c7f590a9f970e38da954aefbb12d7eabf4"
+      }
+    ],
+    "status": "qualified"
+  },
+  "candidate-a": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/bool-transition/runs/kda-experiments/builds/candidate-a/22cd90aef7ba4aa4026539878b7db01ddc804c5e4e3e402ea2243019de422de6/793be21b567b407aa9341a8ec1d2a36b/candidate.so",
+        "sha256": "21432178364bd94e635eba9ce456c0a9e1cb5fe7e7e8572bec4ff6c75b8da064"
+      }
+    ],
+    "binary_sha256_after": "21432178364bd94e635eba9ce456c0a9e1cb5fe7e7e8572bec4ff6c75b8da064",
+    "binary_sha256_before": "21432178364bd94e635eba9ce456c0a9e1cb5fe7e7e8572bec4ff6c75b8da064",
+    "build_fingerprint": "22cd90aef7ba4aa4026539878b7db01ddc804c5e4e3e402ea2243019de422de6",
+    "candidate_id": "candidate-a",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 4.8587847979979415,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "63204fce-4648-45a3-89b0-491231f09c27",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-candidate-a-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/017-sanitize-bool-transition-candidate-a-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/017-sanitize-bool-transition-candidate-a-memcheck.stdout.txt",
+          "stdout_sha256": "da73c3d2efac6c5b8968e6e2e9288aa5709067250f5476ad75c1a9c41cd11d16"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "63204fce-4648-45a3-89b0-491231f09c27",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/foreground.stdout.txt",
+          "controller_stdout_sha256": "a263926711ae2279e9a88cca3fbc33932b8cfe227f2ce1e80155df0dda8109a6",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/sanitizer/run/summary.json",
+          "summary_json_sha256": "73bc6e154a5988524052a20f9d9a8fcf7ba5d33f4ef8145f2d8305870fba02af",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/6a26a134-1bd7-4196-8842-939f0948bcdb/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "2cbf1324bda24cc285847e9f473f164a",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/memcheck/validation-result.json",
+        "validation_result_sha256": "a3b5ee129098598686023f6ca136ad4624f5b2360ff073e6b75b63163461b5b6"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.577671525999904,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "32b51fe9-3dc4-4b40-9fa3-2dd3ee7c3968",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-candidate-a-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/018-sanitize-bool-transition-candidate-a-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/018-sanitize-bool-transition-candidate-a-racecheck.stdout.txt",
+          "stdout_sha256": "384f3dc4218aaadd7a80b93dcf6cf38629a80d1b3f36507cb4a5560aa6e63359"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "32b51fe9-3dc4-4b40-9fa3-2dd3ee7c3968",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/foreground.stdout.txt",
+          "controller_stdout_sha256": "1ab02d8ba20ab51226ca7ca0bc9a2b65100b5ea0a84b00714412d603409ce61f",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/sanitizer/run/summary.json",
+          "summary_json_sha256": "920632e376d4db44355f0f4b2915b75a28a5625622db5b6a992925739762a5d5",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/d1ec4eb3-1f1e-487e-a531-f9c14b3806ef/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "2cbf1324bda24cc285847e9f473f164a",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-a/racecheck/validation-result.json",
+        "validation_result_sha256": "a3b5ee129098598686023f6ca136ad4624f5b2360ff073e6b75b63163461b5b6"
+      }
+    ],
+    "snapshot_sha256": "f69af1902174cb2371aeb6bdb4b09f424e7eb2eccf1193a9e402831c8e5cba23",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa"
+      }
+    ],
+    "status": "qualified"
+  },
+  "candidate-b": {
+    "artifacts": [
+      {
+        "path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/bool-transition/runs/kda-experiments/builds/candidate-b/5ecb8d981ca6ee910022472f11cdf526add60f9c1d623ecdcde5b4c4726964cd/50a0e94f038e44cead10da5ca0975335/candidate.so",
+        "sha256": "ef6e5435a6d3b91c2eeaa0605dff43473a82b54f1d0fe20ee30c67f16dad68d4"
+      }
+    ],
+    "binary_sha256_after": "ef6e5435a6d3b91c2eeaa0605dff43473a82b54f1d0fe20ee30c67f16dad68d4",
+    "binary_sha256_before": "ef6e5435a6d3b91c2eeaa0605dff43473a82b54f1d0fe20ee30c67f16dad68d4",
+    "build_fingerprint": "5ecb8d981ca6ee910022472f11cdf526add60f9c1d623ecdcde5b4c4726964cd",
+    "candidate_id": "candidate-b",
+    "sanitizers": [
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/memcheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 4.7858234430023,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "memcheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "cb5a5554-2e17-4ba1-a134-4556408a4d53",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-candidate-b-memcheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/019-sanitize-bool-transition-candidate-b-memcheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/019-sanitize-bool-transition-candidate-b-memcheck.stdout.txt",
+          "stdout_sha256": "1b1de59d1c04be96d0cd34c6ab08aac1fdde91b354d29192ab54d8817a7443e7"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "cb5a5554-2e17-4ba1-a134-4556408a4d53",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/foreground.stdout.txt",
+          "controller_stdout_sha256": "06d17e864269287176a4b6204d922b8e6894f7a095fcc9f7fe4142a7d94dfcb3",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/sanitizer/run/raw.log",
+          "raw_log_sha256": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+          "sanitizer_summaries": [
+            {
+              "errors": 0
+            }
+          ],
+          "sanitizer_tool": "memcheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/memcheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/memcheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "unknown",
+            "error_count": 0,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "unknown",
+            "limitations": [],
+            "matched_signatures": [],
+            "next_step": "The sanitizer run did not report a device fault. Escalate to batch cuda-gdb if the crash still reproduces.",
+            "reasons": [
+              "compute-sanitizer reported zero errors."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/sanitizer/run/summary.json",
+          "summary_json_sha256": "fc24c4ebd0f7b71bc990ccd4592137dbf7fc5ad398c559a267655fa6b420b135",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/48661c47-f56e-4d8d-9d9b-474384b94187/sanitizer/run/summary.txt",
+          "summary_sha256": "fcb23799a8d20adb6412215f2c2fb13237d3fc371eac10dc743117ac89d5c6a3",
+          "target_exit_status": 0
+        },
+        "tool": "memcheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "1d590bf9072b4092bbee13a0a3414b54",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/memcheck/validation-result.json",
+        "validation_result_sha256": "c1b7c0ba8d074a3dea4bd2ccc0dc8a5f3f3bf51f5a3baa98c44f212b65518178"
+      },
+      {
+        "controller": {
+          "argv": [
+            "/home/tumlinson/project-control/.venv/bin/python",
+            "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/controller_entry.py",
+            "run",
+            "--spec",
+            "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/racecheck/controller-spec.json",
+            "--json"
+          ],
+          "cwd": "/home/tumlinson/KernelBender",
+          "elapsed_seconds": 5.650168196996674,
+          "environment": {
+            "COMPUTE_SANITIZER_BIN": "/home/tumlinson/kda/runs/attention-decode-study/workspace/site/sanitizer_tool.py",
+            "KDA_SANITIZER_TOOL": "racecheck",
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "json": {
+            "classification": "decision-result",
+            "evidence_id": "20683cd5-feb7-4453-9789-31d90f0ca337",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stdout.txt"
+          },
+          "json_status": "succeeded",
+          "label": "sanitize-bool-transition-candidate-b-racecheck",
+          "returncode": 0,
+          "stderr_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/020-sanitize-bool-transition-candidate-b-racecheck.stderr.txt",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/logs/020-sanitize-bool-transition-candidate-b-racecheck.stdout.txt",
+          "stdout_sha256": "89ec649db38d3f942453bdde26c07cb21f3c35cfd1eb6b221134a4ee10eb7cd4"
+        },
+        "passed": true,
+        "sanitizer": {
+          "controller_receipt": {
+            "classification": "decision-result",
+            "evidence_id": "20683cd5-feb7-4453-9789-31d90f0ca337",
+            "lease_receipt": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/lease.json",
+            "message": "No action-worthy result; evidence stored.",
+            "ok": true,
+            "returncode": 0,
+            "status": "succeeded",
+            "stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stderr.txt",
+            "stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stdout.txt"
+          },
+          "controller_stderr_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stderr.txt",
+          "controller_stderr_sha256": "23d45b65fd357ad0d4aed3d57ade4225fe94b682f03d968d9ae1f7c2754ee258",
+          "controller_stdout_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/foreground.stdout.txt",
+          "controller_stdout_sha256": "e220ecfff93b8af2e31588ea9c14081551ad0d98ded46b8e7b097865299908ce",
+          "error_summary_counts": [
+            0
+          ],
+          "passed": true,
+          "raw_log_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/sanitizer/run/raw.log",
+          "raw_log_sha256": "91dbb142f8feb8786cd6fde6ac035e816b67db14e4b7b400a01386ec106b75c4",
+          "sanitizer_summaries": [
+            {
+              "errors": 0,
+              "hazards": 0,
+              "warnings": 0
+            }
+          ],
+          "sanitizer_tool": "racecheck",
+          "summary_json": {
+            "backtrace_head": [],
+            "command": "/home/tumlinson/Software/miniconda3/bin/python3 /home/tumlinson/KernelBender/evaluation/private/native_runner.py validate --family bool-transition --references /home/tumlinson/KernelBender/evaluation/private/references.py --holdouts /home/tumlinson/KernelBender/evaluation/private/holdouts.json --cuda-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64 --cublas-lib-dir /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/lib64 --nvcc /opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/racecheck/validation-request.json /home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/racecheck/validation-result.json ",
+            "conclusive": false,
+            "crash_class": "race-fault",
+            "error_count": null,
+            "exit_status": 0,
+            "host_frames": [],
+            "likely_domain": "race-bug",
+            "limitations": [],
+            "matched_signatures": [
+              "race fault"
+            ],
+            "next_step": "The sanitizer log did not expose an error summary. Inspect raw.log and rerun with a smaller reproducer if needed.",
+            "reasons": [
+              "The failure looks like a data race.",
+              "The sanitizer log did not contain an `ERROR SUMMARY` line."
+            ],
+            "signal": "",
+            "source_hint": null,
+            "status": "partial",
+            "stderr_tail": [],
+            "stdout_tail": [],
+            "tool": "compute-sanitizer",
+            "tool_detail": "memcheck"
+          },
+          "summary_json_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/sanitizer/run/summary.json",
+          "summary_json_sha256": "a629fdf21a3fef1fc6f6c52842c6d0a3ff3f1d3fabae66a34f70e637040520d3",
+          "summary_path": "/home/tumlinson/KernelBender/.todo-orchestrator/runtime/background-artifacts/foreground/c103770d-b2ca-489e-b5c2-cef66cf5c12d/sanitizer/run/summary.txt",
+          "summary_sha256": "469a7c5373b1af1813aede47da0346810d78be0b297f766f4eee0cd8d798847c",
+          "target_exit_status": 0
+        },
+        "tool": "racecheck",
+        "validation": {
+          "private_status": "pass",
+          "public_case_status": {
+            "all-local-tuples": "pass",
+            "large-tail": "pass",
+            "multiword-long-epoch": "pass",
+            "odd-multistep": "pass",
+            "short-periodic": "pass"
+          },
+          "result": {
+            "cases": [
+              {
+                "case_id": "all-local-tuples",
+                "status": "pass",
+                "workload_sha256": "e4f7421453dc6866fa7a5086e869e94721a0281f66c6c2b5e96677b9ce096cf9"
+              },
+              {
+                "case_id": "short-periodic",
+                "status": "pass",
+                "workload_sha256": "e862e590c7a878b0dc090861908508a35d5b68f351901c95230a0bb62383dc54"
+              },
+              {
+                "case_id": "odd-multistep",
+                "status": "pass",
+                "workload_sha256": "3abb107cb984b748912ef4fec85f48db0c6771e3a1d6e55b3e082e344a1c7505"
+              },
+              {
+                "case_id": "multiword-long-epoch",
+                "status": "pass",
+                "workload_sha256": "6928d601730d20f99438844b96c38fc5bdb47ba77f8784444915c0b08f5137a3"
+              },
+              {
+                "case_id": "large-tail",
+                "status": "pass",
+                "workload_sha256": "6d92c997cac2de8168c09c7c7f10af1124bf525d42f809f43fcf88098534628f"
+              }
+            ],
+            "private_checks": {
+              "failures": [],
+              "status": "pass"
+            },
+            "reference_backend": {
+              "dtype": "float64 over represented float32 inputs",
+              "numpy": "2.2.6"
+            },
+            "request_id": "1d590bf9072b4092bbee13a0a3414b54",
+            "schema_version": 1,
+            "status": "ok"
+          },
+          "status": "passed"
+        },
+        "validation_result_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/qualification/bool-transition/candidate-b/racecheck/validation-result.json",
+        "validation_result_sha256": "c1b7c0ba8d074a3dea4bd2ccc0dc8a5f3f3bf51f5a3baa98c44f212b65518178"
+      }
+    ],
+    "snapshot_sha256": "cb4796b8628d51c68de4eada74c9b3333bfc673640dbb7cf0d90e00070832c16",
+    "source_identity_after": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702"
+      }
+    ],
+    "source_identity_before": [
+      {
+        "path": "candidate_api.h",
+        "sha256": "41644acaa29d2b1cc8f6320cb7c9db2c878011cb02bf5144bf8a877b79008cf0"
+      },
+      {
+        "path": "kernel.cu",
+        "sha256": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702"
+      }
+    ],
+    "status": "qualified"
+  }
+}

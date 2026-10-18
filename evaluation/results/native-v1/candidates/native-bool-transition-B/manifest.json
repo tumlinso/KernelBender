@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "files": [
+    "candidate_api.h",
+    "kernel.cu"
+  ],
+  "dependencies": []
+}

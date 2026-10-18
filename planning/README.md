@@ -1,5 +1,5 @@
 # Planning
 
-This directory holds concise research, design, and implementation notes for KernelBender as those stages begin. They have not started as part of the repository bootstrap. Keep the future skill's scope and design open until informed by research and discussion.
+This directory holds concise research, design, implementation, and evaluation notes as KernelBender's work continues. The portable instruction/reference skill is implemented and remains optional and experimental. In the bounded native pilot, all nine baseline/candidate binaries across three task families passed qualification. The Boolean transition B kernel was promoted at 2.890× its task baseline; the task baselines were retained for observable energy and dense GEMM. Matched probes did not establish incremental skill benefit, and no causal skill-level win is claimed. See the [evaluation report](../evaluation/REPORT.md) and [implementation handoff](IMPLEMENTATION-HANDOFF.md) for the evidence and its limits.
 
 Project Control workspace `kernelbender` is independent and rooted at `/home/tumlinson/KernelBender`. Its native Todo authority is the source of task status. Use supported Project Control operations for task changes; do not edit its database or generated Markdown/state projections directly. Planning documents capture context and decisions but do not replace Todo state.

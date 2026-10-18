@@ -5,3 +5,6 @@ __pycache__/
 runs/
 outputs/
 profile/
+
+# Controller receipts, leases and bulky local runtime artifacts.
+.todo-orchestrator/runtime/

@@ -1,0 +1,303 @@
+{
+  "adoption": "optional explicit experimental",
+  "completion_evidence_sha256": "90dfbf89982398ebc9bd59b8c421f93c8b5e36751119391ce36801d508e9c94f",
+  "driver_sha256": "960ff68d32e11c0c88970fc856181c2d03cc72c3851ab1e35aa4f410f390a3ca",
+  "evaluator_code_commit": "7ed9908",
+  "families": {
+    "bool-transition": {
+      "decision": {
+        "candidate_id": "candidate-b",
+        "ci_high": 3.0078897310926465,
+        "ci_low": 2.747412351339687,
+        "eligible": true,
+        "per_case": {
+          "all-local-tuples": {
+            "ci_high": 2.437267459591338,
+            "ci_low": 2.328773999247082,
+            "eligible": true,
+            "score": 2.38378746172641
+          },
+          "large-tail": {
+            "ci_high": 4.022281914659385,
+            "ci_low": 2.5129920917702275,
+            "eligible": true,
+            "score": 3.2626030662904872
+          },
+          "multiword-long-epoch": {
+            "ci_high": 3.8224652159697756,
+            "ci_low": 3.7035476319106797,
+            "eligible": true,
+            "score": 3.762750488316576
+          },
+          "odd-multistep": {
+            "ci_high": 3.0462077936768273,
+            "ci_low": 3.0373666529144803,
+            "eligible": true,
+            "score": 3.0418783190948964
+          },
+          "short-periodic": {
+            "ci_high": 2.336654759666603,
+            "ci_low": 2.194935954721478,
+            "eligible": true,
+            "score": 2.2640034206829145
+          }
+        },
+        "reason": "confirmed",
+        "score": 2.8898228558307104
+      },
+      "environment": {
+        "architecture": "sm_70",
+        "compute_capability": "7.0",
+        "device": {
+          "index": 0,
+          "name": "Tesla V100-SXM2-16GB",
+          "uuid": "GPU-21131915148823af38dd1743ae1f5cc8"
+        },
+        "device_uuid": "GPU-21131915148823af38dd1743ae1f5cc8",
+        "driver_version": "13000",
+        "kind": "cuda",
+        "multiprocessor_count": 80,
+        "runtime_version": "12090",
+        "tools": {
+          "numpy": "2.2.6",
+          "numpy_threads": {
+            "MKL_NUM_THREADS": null,
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "nvcc": "Build cuda_12.9.r12.9/compiler.36037853_0",
+          "python": "3.13.11"
+        }
+      },
+      "exploration_rankings": [
+        {
+          "candidate_id": "candidate-b",
+          "score": 2.861353163142633
+        },
+        {
+          "candidate_id": "candidate-a",
+          "score": 2.65419760192536
+        },
+        {
+          "candidate_id": "baseline",
+          "score": 1.0
+        }
+      ],
+      "kda_summary_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/bool-transition/runs/kda-experiments/attempts/cab78b97-377e-44a9-bb00-21c03e6ab2a9/summary.json",
+      "kda_summary_sha256": "47b63d0d3000a20ebadcec65dfbea3a02b8d4ffb5dca710de567ffae5b55c3cd",
+      "kernel_promoted": true,
+      "promotion_status": "applied",
+      "qualification": {
+        "baseline": "qualified",
+        "candidate-a": "qualified",
+        "candidate-b": "qualified"
+      },
+      "qualified_binary_sha256": {
+        "baseline": "a2dc5a390de09431a35b396e8f4c0353e6e66cd2a8e5e6f46ccf307728919b7b",
+        "candidate-a": "21432178364bd94e635eba9ce456c0a9e1cb5fe7e7e8572bec4ff6c75b8da064",
+        "candidate-b": "ef6e5435a6d3b91c2eeaa0605dff43473a82b54f1d0fe20ee30c67f16dad68d4"
+      },
+      "retained_summary": "evaluation/results/native-v1/retained-results/bool-transition-kda-summary.json",
+      "source_sha256": {
+        "baseline": "04d7efaf9a6f69fc09e897e97e2911c7f590a9f970e38da954aefbb12d7eabf4",
+        "candidate-a": "b5a1cb1e9cd944a907a1009aa986561f29245c3389b9a4189fc6585c485830aa",
+        "candidate-b": "8ccf4cecb2605e81e5cfccf9bd0cf70368bbc2805edcd72e73c5019580bbe702"
+      },
+      "status": "evaluated",
+      "task_sha256": "f4e3680684e091cb213deb1ff046d0f07637b63116147f99e4a49486dbb68a4f"
+    },
+    "dense-gemm": {
+      "decision": {
+        "candidate_id": "candidate-a",
+        "ci_high": 1.0476703708127784,
+        "ci_low": 0.9614023552467379,
+        "eligible": false,
+        "per_case": {
+          "rectangular": {
+            "ci_high": 1.068367051777237,
+            "ci_low": 0.9549326235235406,
+            "eligible": true,
+            "score": 1.011011011011011
+          },
+          "square": {
+            "ci_high": 1.0273746312684358,
+            "ci_low": 0.967915919830536,
+            "eligible": true,
+            "score": 0.9971415551596997
+          }
+        },
+        "reason": "minimum_improvement_not_supported",
+        "score": 1.0040523351912987
+      },
+      "environment": {
+        "architecture": "sm_70",
+        "compute_capability": "7.0",
+        "device": {
+          "index": 0,
+          "name": "Tesla V100-SXM2-16GB",
+          "uuid": "GPU-21131915148823af38dd1743ae1f5cc8"
+        },
+        "device_uuid": "GPU-21131915148823af38dd1743ae1f5cc8",
+        "driver_version": "13000",
+        "kind": "cuda",
+        "multiprocessor_count": 80,
+        "runtime_version": "12090",
+        "tools": {
+          "numpy": "2.2.6",
+          "numpy_threads": {
+            "MKL_NUM_THREADS": null,
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "nvcc": "Build cuda_12.9.r12.9/compiler.36037853_0",
+          "python": "3.13.11"
+        }
+      },
+      "exploration_rankings": [
+        {
+          "candidate_id": "candidate-a",
+          "score": 1.0542347752221255
+        },
+        {
+          "candidate_id": "candidate-b",
+          "score": 1.0520054477259122
+        },
+        {
+          "candidate_id": "baseline",
+          "score": 1.0
+        }
+      ],
+      "kda_summary_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/dense-gemm/runs/kda-experiments/attempts/8d762977-81ab-4ace-a9c4-4a5ce5277187/summary.json",
+      "kda_summary_sha256": "12c4e6c52949d3555f91d243ba2069f34e07b5e39b57b5d00b3e6a84e69229f8",
+      "kernel_promoted": false,
+      "promotion_status": "initialized",
+      "qualification": {
+        "baseline": "qualified",
+        "candidate-a": "qualified",
+        "candidate-b": "qualified"
+      },
+      "qualified_binary_sha256": {
+        "baseline": "d3584678d5b7c46e97df95f4a31ca45b4dfb79ac8c18e4e5db854ebed5085120",
+        "candidate-a": "dd3a421ecf67ccc2262983c386f253e3749962ea348eeddccfa3fa7af7ac6120",
+        "candidate-b": "3360bd7c014d8c30c1331c51c35c7f2c91ed84f865e77dae6af856e440da677b"
+      },
+      "retained_summary": "evaluation/results/native-v1/retained-results/dense-gemm-kda-summary.json",
+      "source_sha256": {
+        "baseline": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b",
+        "candidate-a": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b",
+        "candidate-b": "cbaf51bac81e5928306d57f0e15973ea3e9a8803dbd054c671cb95b47f6a471b"
+      },
+      "status": "evaluated",
+      "task_sha256": "2f107d3e04dca0a891fdb8e424274209eb03e92ce198830801ff1114c27467b2"
+    },
+    "observable-energy": {
+      "decision": {
+        "candidate_id": "candidate-a",
+        "ci_high": 2.3505767458695583,
+        "ci_low": 2.333856123187604,
+        "eligible": false,
+        "per_case": {
+          "large-long-epoch": {
+            "ci_high": 5.093969480270722,
+            "ci_low": 4.969453771189912,
+            "eligible": true,
+            "score": 5.0325133586089255
+          },
+          "large-one-use": {
+            "ci_high": 0.9075002419432885,
+            "ci_low": 0.880664533206906,
+            "eligible": false,
+            "score": 0.8942192067418151
+          },
+          "small-one-use": {
+            "ci_high": 2.9047119841094684,
+            "ci_low": 2.8094429533877423,
+            "eligible": true,
+            "score": 2.856903328660564
+          }
+        },
+        "reason": "per_case_regression_limit_exceeded",
+        "score": 2.3426540458764005
+      },
+      "environment": {
+        "architecture": "sm_70",
+        "compute_capability": "7.0",
+        "device": {
+          "index": 0,
+          "name": "Tesla V100-SXM2-16GB",
+          "uuid": "GPU-21131915148823af38dd1743ae1f5cc8"
+        },
+        "device_uuid": "GPU-21131915148823af38dd1743ae1f5cc8",
+        "driver_version": "13000",
+        "kind": "cuda",
+        "multiprocessor_count": 80,
+        "runtime_version": "12090",
+        "tools": {
+          "numpy": "2.2.6",
+          "numpy_threads": {
+            "MKL_NUM_THREADS": null,
+            "OMP_NUM_THREADS": "2",
+            "OPENBLAS_NUM_THREADS": "2"
+          },
+          "nvcc": "Build cuda_12.9.r12.9/compiler.36037853_0",
+          "python": "3.13.11"
+        }
+      },
+      "exploration_rankings": [
+        {
+          "candidate_id": "candidate-a",
+          "score": 2.464297232269469
+        },
+        {
+          "candidate_id": "candidate-b",
+          "score": 2.462228369075732
+        },
+        {
+          "candidate_id": "baseline",
+          "score": 1.0
+        }
+      ],
+      "kda_summary_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/work/observable-energy/runs/kda-experiments/attempts/7e4740f6-d307-48e4-bf2e-091e3f92323c/summary.json",
+      "kda_summary_sha256": "c8c71bd2f2ed9011cc7c1141a07e3d92e1eb47dad714d17e30d05bb9d98f4bce",
+      "kernel_promoted": false,
+      "promotion_status": "initialized",
+      "qualification": {
+        "baseline": "qualified",
+        "candidate-a": "qualified",
+        "candidate-b": "qualified"
+      },
+      "qualified_binary_sha256": {
+        "baseline": "f01279f2bba95f8875a9a6570a5e49e2ad681dcdec54456c115836b331ee8a07",
+        "candidate-a": "0f9dc02ed2c0cb7eab534c63b49330f62fe037f5ff77fd08cb83873f90876fa3",
+        "candidate-b": "f3431fb6b6a0526dbfd9ae0fef8cf53462d82e9a8ddef14c2bb392b96858503d"
+      },
+      "retained_summary": "evaluation/results/native-v1/retained-results/observable-energy-kda-summary.json",
+      "source_sha256": {
+        "baseline": "26a74e957dfaca3c6129948a909eefda792b83309b6ce8a5d858d1ff5beb1e80",
+        "candidate-a": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8",
+        "candidate-b": "6cd943b4c5c463b2f170212453cf1993cd7b19406780270693b5c22f951f3985"
+      },
+      "status": "evaluated",
+      "task_sha256": "de336997c3a0cc47319c8754d51121a5327b10634eb5215da7328fbc9992a5cb"
+    }
+  },
+  "independent_agent_pairs_per_family": 1,
+  "independent_agent_repeats": 0,
+  "limitations": [
+    "Single agent pair per family; timing repetitions are not independent agent trials.",
+    "No claimed skill-level win; no independent repeat or ablation was run.",
+    "Tiny frozen timing budget: two exploration and two confirmation rounds, three samples per invocation; wall full-API synchronization includes candidate preparation and allocation but excludes host setup/transfers and output reset.",
+    "Equal command budgets and configured model/effort; token/inference costs unavailable.",
+    "Trial command namespaces constrained files/network/GPU; broader model tools remained instruction-constrained, not adversarially isolated.",
+    "Three evaluator/controller launch failures retained; no candidate retuning or replacement after results.",
+    "Raw binaries and full controller/KDA artifacts remain local under ignored runs/runtime paths; portable candidate sources and compact result evidence are committed."
+  ],
+  "native_runner_sha256": "2da8650f8d9c9345423f0216c2823f89eb96d6376fdd16a56d53ccc145df43ae",
+  "run_id": "kb-native-pilot-r4",
+  "run_state_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r4/run.json",
+  "run_state_sha256": "a6a7b26565ae18d380b217e99b4614d9366eb03667195b65125682d47e1d9c93",
+  "schema_version": 1,
+  "skill_commit": "25b4b167c73caf4f6540132013e10f58c0e43f73",
+  "skill_level_benefit_established": false,
+  "status": "completed_experimental_not_promoted_as_skill"
+}

@@ -1,0 +1,30 @@
+{
+  "attempt": 1,
+  "started_unix": 1792330619.4721506,
+  "elapsed_seconds": 1.854,
+  "argv": [
+    "/opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/bin/nvcc",
+    "-std=c++17",
+    "-arch=sm_70",
+    "-shared",
+    "-Xcompiler=-fPIC",
+    "-I/work",
+    "/work/kernel.cu",
+    "-L/opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/targets/x86_64-linux/lib",
+    "-lcublas",
+    "-L/opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64",
+    "-lcudart",
+    "-Xlinker",
+    "-rpath",
+    "-Xlinker",
+    "/opt/nvidia/hpc_sdk/Linux_x86_64/26.1/math_libs/12.9/targets/x86_64-linux/lib:/opt/nvidia/hpc_sdk/Linux_x86_64/26.1/cuda/12.9/lib64",
+    "-o",
+    "/work/build-history/attempt-01/candidate.so"
+  ],
+  "exit_code": 0,
+  "timed_out": false,
+  "source_sha256": "7532061a1f5e21e7b0a8d8f32beb48690238ce714b44f3085311e2fb8ac31ae8",
+  "header_sha256": "ba8b6ec07292147ae6b2559bab06c782b236d5e939812f800bb210cdf4ff7bd6",
+  "output_sha256": "9771f96d5cfe4c060802e98d1bbbc60510a77555c8fb3898a775248b0acb8db9",
+  "status": "compiled"
+}
