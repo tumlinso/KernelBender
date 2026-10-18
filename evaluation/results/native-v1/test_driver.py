@@ -331,6 +331,50 @@ class DriverContractTests(unittest.TestCase):
         record["json_status"] = "failed"
         self.assertFalse(driver._controller_succeeded(record))
 
+    def test_controller_binary_paths_are_relative_to_git_project_root(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self.assertEqual(driver.subprocess.run(
+                ["git", "init", "-q", str(root)], capture_output=True, text=True).returncode, 0)
+            pilot = root / "runs" / "kernelbender-pilot"
+            run_dir = pilot / "native-v1" / "test-run"
+            run_dir.mkdir(parents=True)
+            artifact = pilot / "build" / "candidate.so"
+            artifact.parent.mkdir()
+            artifact.write_bytes(b"cpu fixture")
+            task = root / "task.json"
+            request = root / "request.json"
+            task.write_text("{}\n", encoding="utf-8")
+            request.write_text("{}\n", encoding="utf-8")
+            config = root / "controller.json"
+            config.write_text(json.dumps({
+                "project_root": str(pilot), "resources": {}, "toolchain": {"root": "/cuda"},
+            }), encoding="utf-8")
+            result = run_dir / "qualification" / "result.json"
+            sanitizer = root / "compute-sanitizer"
+            adapter = root / "sanitizer-adapter.py"
+            sanitizer.write_text("sanitizer fixture\n", encoding="utf-8")
+            adapter.write_text("adapter fixture\n", encoding="utf-8")
+            with patch.object(driver, "SITE_CONFIG", config), \
+                 patch.object(driver, "SANITIZER", sanitizer), \
+                 patch.object(driver, "SANITIZER_ADAPTER", adapter):
+                spec_path = driver._controller_spec(
+                    run_dir, "bool-transition", "baseline", "memcheck", task, request,
+                    result, str(artifact))
+            spec = json.loads(spec_path.read_text(encoding="utf-8"))
+            controller_root = Path(driver.subprocess.run(
+                ["git", "-C", str(pilot), "rev-parse", "--show-toplevel"],
+                capture_output=True, text=True, check=True).stdout.strip()).resolve()
+            self.assertEqual(spec["project_root"], str(pilot))
+            self.assertEqual(spec["binary_paths"], [artifact.relative_to(controller_root).as_posix()])
+            # The controller resolves command_cwd against project_root but binaries
+            # against git_root(project_root); exercise both path contracts.
+            command_cwd = Path(spec["command_cwd"]).resolve()
+            self.assertTrue(command_cwd.is_relative_to(pilot.resolve()))
+            resolved_binary = (controller_root / spec["binary_paths"][0]).resolve()
+            self.assertTrue(resolved_binary.is_relative_to(controller_root))
+            self.assertTrue(resolved_binary.is_file())
+
     def test_command_receipt_preserves_timeout_and_exact_argv(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

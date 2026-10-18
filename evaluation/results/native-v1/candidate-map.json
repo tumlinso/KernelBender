@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "run_id": "kb-native-pilot-final",
+  "run_id": "kb-native-pilot-r2",
   "trial_policy_sha256": "403a899f79e25135709fc13c6675ad7797e1ec94de9faab4a92b4b1faec54913",
   "source_manifest_sha256": "bece90af4e2f9167c1abb9db793ce77f86810647dcf7421951819b6c1299e174",
   "agent_policy_sha256": "04220afb3f6af8849263b3db684d344b7ed7193f821578d982bed1a8546a682f",

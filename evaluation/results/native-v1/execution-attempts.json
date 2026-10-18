@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "attempts": [
+    {
+      "run_id": "kb-native-pilot-final",
+      "state": "failed",
+      "driver_sha256": "195e411a6390dac529ff4724a3cea2411d906a4bddaaea896ee129714236eb12",
+      "run_state_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-final/run.json",
+      "run_state_sha256": "ebe7f79e160aafd06284b458cd83adf778aedbb7ab9e99ce8a57657a66656f56",
+      "failure": "Controller rejected binary_paths before GPU admission; all three families blocked at baseline qualification. No candidate algorithm altered.",
+      "gpu_workload_started": false
+    }
+  ]
+}

@@ -568,6 +568,13 @@ def _controller_succeeded(record: dict[str, Any]) -> bool:
                 receipt.get("status") == "succeeded")
 
 
+def _controller_project_root(project: Path) -> Path:
+    """Match cuda_controller.git_root when resolving project-relative binaries."""
+    result = subprocess.run(["git", "-C", str(project), "rev-parse", "--show-toplevel"],
+                            capture_output=True, text=True, check=False)
+    return Path(result.stdout.strip()).resolve() if result.returncode == 0 else project.resolve()
+
+
 def _controller_spec(run_dir: Path, family: str, candidate_id: str, tool: str,
                      task_path: Path, request_path: Path, result_path: Path,
                      build_artifact: str) -> Path:
@@ -584,7 +591,12 @@ def _controller_spec(run_dir: Path, family: str, candidate_id: str, tool: str,
                  str(request_path), str(result_path)]
     project = Path(config["project_root"]).resolve()
     try:
-        binary_rel = Path(build_artifact).resolve().relative_to(project).as_posix()
+        artifact = Path(build_artifact).resolve()
+        artifact.relative_to(project)
+        # cuda_controller.foreground_run resolves binary_paths relative to
+        # git_root(project_root), not project_root itself. The pilot is nested
+        # under KernelBender's repository, so preserve that controller contract.
+        binary_rel = artifact.relative_to(_controller_project_root(project)).as_posix()
     except ValueError as exc:
         raise ValueError("build artifact must be inside the configured pilot project root") from exc
     spec = {
