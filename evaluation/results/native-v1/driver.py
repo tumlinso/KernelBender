@@ -48,6 +48,9 @@ SANITIZER_TOOLS = {
     "dense-gemm": ("memcheck", "racecheck"),
 }
 ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,95}$")
+COMPLETION_EVIDENCE_NAME = "completion-evidence.json"
+PINNED_STATE_FILES = ("trial_policy", "source_manifest", "agent_policy",
+                      "input_manifests", "driver", "site_config")
 
 
 def sha256_file(path: Path) -> str:
@@ -540,12 +543,16 @@ def _parse_sanitizer_artifacts(controller_record: dict[str, Any], tool: str) -> 
         "controller_receipt": receipt, "controller_stdout_path": stdout_path,
         "controller_stdout_sha256": sha256_file(Path(stdout_path)),
         "controller_stderr_path": stderr_path,
+        "controller_stderr_sha256": (sha256_file(Path(stderr_path))
+                                      if isinstance(stderr_path, str) and Path(stderr_path).is_file()
+                                      else None),
         "raw_log_path": str(raw_log), "raw_log_sha256": sha256_file(raw_log),
         "sanitizer_tool": tool,
         "sanitizer_summaries": parsed_summaries,
         "error_summary_counts": [summary["errors"] for summary in parsed_summaries],
         "summary_path": str(summary_text), "summary_sha256": sha256_file(summary_text),
         "summary_json_path": str(summary_json) if summary_json.is_file() else None,
+        "summary_json_sha256": sha256_file(summary_json) if summary_json.is_file() else None,
         "summary_json": parsed_summary,
         "target_exit_status": target_exit_status,
         "passed": (bool(parsed_summaries) and
@@ -655,6 +662,8 @@ def _qualify_one(run_dir: Path, family: str, candidate_id: str,
             response["sanitizer"] = parsed
             request_result = _validate_runner_json(tool_result, task, request_id)
             response["validation"] = request_result
+            response["validation_result_path"] = str(tool_result)
+            response["validation_result_sha256"] = sha256_file(tool_result)
             response["passed"] = bool(_controller_succeeded(controller_record) and
                                        parsed["passed"] and request_result["status"] == "passed")
             if not response["passed"]:
@@ -717,13 +726,171 @@ def _terminal_success(state: dict[str, Any]) -> bool:
     return True
 
 
+def _completion_file_identity(run_dir: Path) -> list[dict[str, str]]:
+    excluded = {"run.json", COMPLETION_EVIDENCE_NAME}
+    files = []
+    for path in sorted(run_dir.rglob("*")):
+        if path.is_symlink():
+            raise ValueError(f"completed run contains a symlink: {path}")
+        if path.is_file():
+            relative = path.relative_to(run_dir).as_posix()
+            if relative not in excluded:
+                files.append({"path": relative, "sha256": sha256_file(path)})
+    return files
+
+
+def _completion_external_inputs(state: dict[str, Any], run_dir: Path) -> list[dict[str, str]]:
+    run_root = run_dir.resolve(strict=True)
+    records: dict[tuple[str, str], dict[str, str]] = {}
+
+    def add(label: str, path_value: str, expected_hash: str | None = None) -> None:
+        path = Path(path_value).resolve(strict=True)
+        if not path.is_file():
+            raise ValueError(f"completed-run input is not a regular file: {path}")
+        digest = sha256_file(path)
+        if expected_hash is not None and digest != expected_hash:
+            raise ValueError(f"completed-run input hash changed: {path}")
+        try:
+            path.relative_to(run_root)
+        except ValueError:
+            records[(label, str(path))] = {"id": label, "path": str(path), "sha256": digest}
+
+    for key in PINNED_STATE_FILES:
+        path_value = state.get(key)
+        if not isinstance(path_value, str):
+            raise ValueError(f"completed run lacks pinned input path: {key}")
+        add(f"state:{key}", path_value, state.get(f"{key}_sha256"))
+
+    for family, record in state.get("families", {}).items():
+        workspace_value = record.get("workspace")
+        if isinstance(workspace_value, str):
+            workspace = Path(workspace_value).resolve(strict=True)
+            for filename in ("candidates.jsonl", "benchmark.csv"):
+                artifact = workspace / filename
+                if record.get("status") == "evaluated" and not artifact.is_file():
+                    raise ValueError(f"completed KDA workspace lacks retained {filename}: {artifact}")
+                if artifact.is_file():
+                    add(f"kda:{family}:{filename}", str(artifact))
+        task_value = record.get("task")
+        if not isinstance(task_value, str):
+            raise ValueError(f"completed run lacks task path: {family}")
+        task_path = Path(task_value).resolve(strict=True)
+        try:
+            task_path.relative_to(run_root)
+        except ValueError as exc:
+            raise ValueError(f"completed task is outside the run directory: {task_path}") from exc
+        if sha256_file(task_path) != record.get("task_sha256"):
+            raise ValueError(f"completed task hash changed: {task_path}")
+        task = read_json(task_path)
+        trusted_inputs = task.get("trusted_inputs", [])
+        if not isinstance(trusted_inputs, list):
+            raise ValueError(f"completed task trusted_inputs is malformed: {task_path}")
+        for item in trusted_inputs:
+            if not isinstance(item, dict) or not isinstance(item.get("path"), str):
+                raise ValueError(f"completed task has malformed trusted input: {task_path}")
+            add(f"task:{family}:{item.get('id', 'unknown')}", item["path"])
+        evaluation = record.get("evaluation", {})
+        if isinstance(evaluation, dict):
+            for stream in ("stdout", "stderr"):
+                path_key, hash_key = f"{stream}_path", f"{stream}_sha256"
+                if evaluation.get(path_key):
+                    add(f"kda:{family}:{stream}", evaluation[path_key], evaluation.get(hash_key))
+            result = evaluation.get("json", {})
+            if isinstance(result, dict) and result.get("summary_path"):
+                add(f"kda:{family}:summary", result["summary_path"],
+                    evaluation.get("summary_path_sha256"))
+        for candidate_id, candidate in record.get("candidates", {}).items():
+            registered = candidate.get("record", {})
+            snapshot_dir = registered.get("snapshot_dir") if isinstance(registered, dict) else None
+            if isinstance(snapshot_dir, str):
+                for source_file in registered.get("source_manifest", []):
+                    if isinstance(source_file, dict) and isinstance(source_file.get("path"), str):
+                        add(f"source:{family}:{candidate_id}",
+                            str(Path(snapshot_dir) / source_file["path"]), source_file.get("sha256"))
+            qualification = candidate.get("qualification", {})
+            if not isinstance(qualification, dict):
+                continue
+            for artifact in qualification.get("artifacts", []):
+                add(f"binary:{family}:{candidate_id}", artifact["path"], artifact.get("sha256"))
+            for index, response in enumerate(qualification.get("sanitizers", [])):
+                controller = response.get("controller", {})
+                if isinstance(controller, dict):
+                    for stream in ("stdout", "stderr"):
+                        path_key, hash_key = f"{stream}_path", f"{stream}_sha256"
+                        if controller.get(path_key):
+                            add(f"controller:{family}:{candidate_id}:{index}:{stream}",
+                                controller[path_key], controller.get(hash_key))
+                sanitizer = response.get("sanitizer", {})
+                if isinstance(sanitizer, dict):
+                    for key, hash_key in (("raw_log_path", "raw_log_sha256"),
+                                          ("summary_path", "summary_sha256"),
+                                          ("summary_json_path", "summary_json_sha256"),
+                                          ("controller_stdout_path", "controller_stdout_sha256"),
+                                          ("controller_stderr_path", "controller_stderr_sha256")):
+                        if sanitizer.get(key):
+                            add(f"sanitizer:{family}:{candidate_id}:{index}:{key}",
+                                sanitizer[key], sanitizer.get(hash_key))
+                if response.get("validation_result_path"):
+                    add(f"validator:{family}:{candidate_id}:{index}",
+                        response["validation_result_path"], response.get("validation_result_sha256"))
+    return [records[key] for key in sorted(records)]
+
+
+def _record_completion_evidence(run_dir: Path, state: dict[str, Any]) -> str:
+    path = run_dir / COMPLETION_EVIDENCE_NAME
+    if path.exists():
+        raise ValueError("completion evidence already exists; refusing to replace it")
+    manifest = {
+        "schema_version": 1,
+        "run_id": state["run_id"],
+        "terminal_status": state["status"],
+        "state_sha256": canonical_hash(state),
+        "external_inputs": _completion_external_inputs(state, run_dir),
+        "files": _completion_file_identity(run_dir),
+    }
+    write_json(path, manifest)
+    return sha256_file(path)
+
+
+def _verify_completed_run(run_dir: Path, state: dict[str, Any]) -> None:
+    expected_status = ("completed_no_qualified_candidate"
+                       if any(row.get("status") == "no_qualified_candidate"
+                              for row in state.get("families", {}).values())
+                       else "qualified_and_evaluated")
+    if state.get("status") != expected_status or not _terminal_success(state):
+        raise ValueError("completed run state is not a successful terminal result")
+    if state.get("driver_sha256") != sha256_file(Path(__file__).resolve()):
+        raise ValueError("completed run driver identity changed")
+    path = run_dir / COMPLETION_EVIDENCE_NAME
+    if not path.is_file() or path.is_symlink():
+        raise ValueError("completed run lacks its immutable evidence manifest")
+    if sha256_file(path) != state.get("completion_evidence_sha256"):
+        raise ValueError("completed-run evidence manifest hash changed")
+    manifest = read_json(path)
+    state_without_manifest_hash = {key: value for key, value in state.items()
+                                   if key != "completion_evidence_sha256"}
+    if (manifest.get("schema_version") != 1 or manifest.get("run_id") != state.get("run_id") or
+            manifest.get("terminal_status") != state.get("status") or
+            manifest.get("state_sha256") != canonical_hash(state_without_manifest_hash)):
+        raise ValueError("completed-run state no longer matches its evidence manifest")
+    if manifest.get("files") != _completion_file_identity(run_dir):
+        raise ValueError("completed-run retained evidence files changed")
+    if manifest.get("external_inputs") != _completion_external_inputs(state, run_dir):
+        raise ValueError("completed-run frozen or trusted input identities changed")
+
+
 def qualify(run_id: str) -> Path:
     if not ID_PATTERN.fullmatch(run_id):
         raise ValueError("run_id must be a simple filesystem-safe identifier")
     run_dir = RUNS_ROOT / run_id
     state_path = run_dir / "run.json"
     state = read_json(state_path)
-    if state.get("run_id") != run_id or state.get("status") != "prepared":
+    if state.get("run_id") != run_id:
+        raise ValueError("qualify requires a matching run identifier")
+    if state.get("status") in {"completed_no_qualified_candidate", "qualified_and_evaluated"}:
+        _verify_completed_run(run_dir, state)
+        return state_path
+    if state.get("status") != "prepared":
         raise ValueError("qualify requires a matching run with status=prepared")
     if state.get("driver_sha256") != sha256_file(Path(__file__).resolve()):
         raise ValueError("driver source changed since CPU preparation; bind and prepare a new run")
@@ -780,6 +947,9 @@ def qualify(run_id: str) -> Path:
             if eval_record["returncode"] == 0 and eval_record.get("json_status") == "ok":
                 record["status"] = "evaluated"
                 record["timing_status"] = "complete"
+                summary_path = eval_record.get("json", {}).get("summary_path")
+                if isinstance(summary_path, str) and Path(summary_path).is_file():
+                    eval_record["summary_path_sha256"] = sha256_file(Path(summary_path))
             else:
                 record["status"] = "evaluation_failed"
                 record["timing_status"] = "failed"
@@ -788,6 +958,7 @@ def qualify(run_id: str) -> Path:
         state["status"] = ("completed_no_qualified_candidate"
                             if any(row["status"] == "no_qualified_candidate" for row in state["families"].values())
                             else "qualified_and_evaluated")
+        state["completion_evidence_sha256"] = _record_completion_evidence(run_dir, state)
     else:
         state["status"] = "failed"
     write_json(state_path, state)

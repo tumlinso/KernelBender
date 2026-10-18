@@ -417,7 +417,7 @@
           "task_id": "KB-05"
         }
       ],
-      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/native-pilot.json, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md.\nAcceptance:\n- Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.\n- Start one A/B pair per family and independently repeat any claimed skill-level win or unstable result, within the declared initial cap. Count all attempts and search costs.\n- Validate generated kernels independently and compare complete caller-visible costs including preparation/update/extraction. Timing repetitions are not independent agent trials.\n- Report individual kernel promotion separately from skill-level evidence. A negative or inconclusive pilot is a legitimate result and must not expand into an unbounded benchmark epic.\n- Only if useful, run a material-only ablation on one informative case; do not automatically triple the full study.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/native-pilot.json, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md.\nAcceptance:\n- Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.\n- Start one A/B pair per family and independently repeat any claimed skill-level win or unstable result, within the declared initial cap. Count all attempts and search costs.\n- Validate generated kernels independently and compare complete caller-visible costs including preparation/update/extraction. Timing repetitions are not independent agent trials.\n- Report individual kernel promotion separately from skill-level evidence. A negative or inconclusive pilot is a legitimate result and must not expand into an unbounded benchmark epic.\n- Only if useful, run a material-only ablation on one informative case; do not automatically triple the full study.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.\nExecution gate freezes the final CPU-prepared kb-native-pilot-final identities; prior CPU-only preparations are retained.",
       "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
       "produced_artifacts": [
         {
@@ -448,6 +448,36 @@
             "planning/kernelbender-bootstrap"
           ],
           "track_git_head": false
+        },
+        {
+          "id": "KB-06-NATIVE-PILOT",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "/usr/bin/env",
+            "OPENBLAS_NUM_THREADS=2",
+            "OMP_NUM_THREADS=2",
+            "/usr/bin/python3",
+            "evaluation/results/native-v1/driver.py",
+            "qualify",
+            "--run-id",
+            "kb-native-pilot-final"
+          ],
+          "cwd": ".",
+          "timeout": 3600,
+          "input_paths": [
+            "evaluation/private",
+            "evaluation/candidate",
+            "evaluation/results/native-v1/driver.py",
+            "evaluation/results/native-v1/agent-policy.json",
+            "evaluation/results/native-v1/input-manifests.json",
+            "evaluation/results/native-v1/candidate-map.json",
+            "evaluation/results/design-v1/trial-policy.json",
+            "evaluation/results/design-v1/shared-source-manifest.json",
+            "runs/kernelbender-pilot/site/controller.json"
+          ],
+          "track_git_head": true,
+          "description": "Controller-admitted memcheck/racecheck and independent public/private validation precede existing KDA paired timing. Baseline or evaluator failure fails the gate; rejected candidates remain recorded. Terminal rechecks verify retained immutable evidence without GPU reruns."
         }
       ]
     },
@@ -466,7 +496,9 @@
           "integration",
           "tests",
           "planning/IMPLEMENTATION-HANDOFF.md",
-          "evaluation/REPORT.md"
+          "evaluation/REPORT.md",
+          "AGENTS.md",
+          "planning/README.md"
         ],
         "read_paths": [
           "planning/kernelbender-bootstrap",
