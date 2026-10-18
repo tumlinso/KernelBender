@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task_id": "kb-native-dense-gemm-control-v1",
+  "cases": [
+    {
+      "id": "square",
+      "weight": 1.0,
+      "input": {"a_seed": 307, "b_seed": 311, "c_seed": 313},
+      "parameters": {"m": 512, "n": 512, "k": 512, "alpha": 1.0, "beta": 0.0}
+    },
+    {
+      "id": "rectangular",
+      "weight": 1.0,
+      "input": {"a_seed": 317, "b_seed": 331, "c_seed": 337},
+      "parameters": {"m": 1024, "n": 384, "k": 256, "alpha": 0.75, "beta": 0.25}
+    }
+  ]
+}

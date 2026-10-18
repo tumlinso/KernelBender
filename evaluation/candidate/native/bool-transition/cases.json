@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "task_id": "kb-native-bool-transition-v1",
+  "cases": [
+    {
+      "id": "all-local-tuples",
+      "weight": 1.0,
+      "input": {"pattern": "debruijn-pairs-mask-halves-v1", "rule_seed": 107},
+      "parameters": {"n": 32, "steps": 1}
+    },
+    {
+      "id": "short-periodic",
+      "weight": 1.0,
+      "input": {"seed": 17, "rule_seed": 107},
+      "parameters": {"n": 31, "steps": 1}
+    },
+    {
+      "id": "odd-multistep",
+      "weight": 1.0,
+      "input": {"seed": 29, "rule_seed": 311},
+      "parameters": {"n": 33, "steps": 8}
+    },
+    {
+      "id": "multiword-long-epoch",
+      "weight": 1.0,
+      "input": {"seed": 41, "rule_seed": 911},
+      "parameters": {"n": 1024, "steps": 32}
+    },
+    {
+      "id": "large-tail",
+      "weight": 1.0,
+      "input": {"seed": 53, "rule_seed": 1201},
+      "parameters": {"n": 65537, "steps": 8}
+    }
+  ]
+}

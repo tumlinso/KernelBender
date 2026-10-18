@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "evaluator_only",
+  "bool_transition": [
+    {
+      "id": "withheld-large-tail-long-epoch",
+      "input": {"seed": 401, "rule_seed": 409},
+      "parameters": {"n": 65537, "steps": 32}
+    },
+    {
+      "id": "withheld-updated-mask-and-rule",
+      "input": {"seed": 419, "rule_seed": 421},
+      "parameters": {"n": 65, "steps": 8}
+    }
+  ],
+  "observable_energy": [
+    {
+      "id": "withheld-updated-weights",
+      "input": {"x_seed": 431, "w_seed": 433, "updated_w_seed": 439},
+      "parameters": {"b": 1, "k": 64, "m": 257, "uses": 8}
+    },
+    {
+      "id": "withheld-wide-small-batch",
+      "input": {"x_seed": 443, "w_seed": 449},
+      "parameters": {"b": 1, "k": 96, "m": 1024, "uses": 64}
+    }
+  ],
+  "dense_gemm": [
+    {
+      "id": "withheld-ragged-rectangular",
+      "input": {"a_seed": 457, "b_seed": 461, "c_seed": 463},
+      "parameters": {"m": 63, "n": 129, "k": 97, "alpha": 0.5, "beta": 0.5}
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "kb-native-observable-energy-v1",
+  "cases": [
+    {
+      "id": "small-one-use",
+      "weight": 1.0,
+      "input": {"x_seed": 211, "w_seed": 223},
+      "parameters": {"b": 1, "k": 32, "m": 256, "uses": 1}
+    },
+    {
+      "id": "large-one-use",
+      "weight": 1.0,
+      "input": {"x_seed": 227, "w_seed": 229},
+      "parameters": {"b": 8, "k": 96, "m": 1024, "uses": 1}
+    },
+    {
+      "id": "large-long-epoch",
+      "weight": 1.0,
+      "input": {"x_seed": 233, "w_seed": 239},
+      "parameters": {"b": 8, "k": 96, "m": 1024, "uses": 64}
+    }
+  ]
+}

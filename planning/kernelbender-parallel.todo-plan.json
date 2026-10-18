@@ -307,7 +307,9 @@
             "tests/test_evaluation_contracts.py",
             "planning/kernelbender-bootstrap"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root and independent Luna reviewer inspected actual CPU references, public/heldout cases, baseline source and KDA runner/schema. Fixed flattened-energy scratch sizing and strong batched baseline; same-process changed-W, all32 Boolean tuples, numerical zero/cancellation guards, dense C reset, output poisoning/no-op rejection and full-device completion are covered.16 CPU checks pass; actual KDA schema/register/CPU prepare checks are reported. No GPU or effectiveness claim. Real controller policy and transitive identities are explicit trusted inputs; command sandbox boundary and broader tool limits documented."
         }
       ]
     },
