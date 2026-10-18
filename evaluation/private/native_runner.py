@@ -44,6 +44,14 @@ def _references(path: str | Path):
     return module
 
 
+def _versioned_symbol(library, versioned: str, legacy: str):
+    """Prefer the ABI-versioned symbol without evaluating an absent fallback."""
+    try:
+        return getattr(library, versioned)
+    except AttributeError:
+        return getattr(library, legacy)
+
+
 class Cuda:
     """Small ctypes binding for only the runtime operations used by this pilot."""
 
@@ -70,8 +78,8 @@ class Cuda:
         self.runtime.cudaEventElapsedTime.argtypes = [ctypes.POINTER(ctypes.c_float), ctypes.c_void_p, ctypes.c_void_p]
         self.runtime.cudaEventDestroy.argtypes = [ctypes.c_void_p]
         self.cublas = ctypes.CDLL(str(Path(cublas_libdir) / "libcublas.so"))
-        self._cublas_create = getattr(self.cublas, "cublasCreate_v2", self.cublas.cublasCreate)
-        self._cublas_destroy = getattr(self.cublas, "cublasDestroy_v2", self.cublas.cublasDestroy)
+        self._cublas_create = _versioned_symbol(self.cublas, "cublasCreate_v2", "cublasCreate")
+        self._cublas_destroy = _versioned_symbol(self.cublas, "cublasDestroy_v2", "cublasDestroy")
         self._cublas_create.argtypes = [ctypes.POINTER(ctypes.c_void_p)]
         self._cublas_destroy.argtypes = [ctypes.c_void_p]
         self.stream = ctypes.c_void_p()

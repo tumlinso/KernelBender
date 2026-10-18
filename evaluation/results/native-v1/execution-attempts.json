@@ -19,6 +19,16 @@
       "failure": "Root selected /usr/bin/python3 without NumPy. Controller admission and sanitizer launch succeeded; runner exited before first instrumented CUDA API. Correct runtime is existing Miniconda Python3 with NumPy2.2.6.",
       "gpu_workload_started": false,
       "controller_admitted": true
+    },
+    {
+      "run_id": "kb-native-pilot-r3",
+      "state": "failed",
+      "driver_sha256": "960ff68d32e11c0c88970fc856181c2d03cc72c3851ab1e35aa4f410f390a3ca",
+      "run_state_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r3/run.json",
+      "run_state_sha256": "82ea22221c6b7e9829ea2ff8c5b09c8b154629053442d818218f8fc50846066f",
+      "failure": "Evaluator eagerly accessed absent legacy cuBLAS symbol while selecting existing versioned symbol; runner exited before CUDA context creation. All arms remain unchanged.",
+      "gpu_workload_started": false,
+      "controller_admitted": true
     }
   ]
 }

@@ -400,7 +400,9 @@
         "exclusive_paths": [
           "evaluation/results",
           "evaluation/REPORT.md",
-          "runs"
+          "runs",
+          "evaluation/private/native_runner.py",
+          "tests/test_evaluation_contracts.py"
         ],
         "read_paths": [
           "planning/kernelbender-bootstrap",
@@ -417,7 +419,7 @@
           "task_id": "KB-05"
         }
       ],
-      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/native-pilot.json, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md.\nAcceptance:\n- Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.\n- Start one A/B pair per family and independently repeat any claimed skill-level win or unstable result, within the declared initial cap. Count all attempts and search costs.\n- Validate generated kernels independently and compare complete caller-visible costs including preparation/update/extraction. Timing repetitions are not independent agent trials.\n- Report individual kernel promotion separately from skill-level evidence. A negative or inconclusive pilot is a legitimate result and must not expand into an unbounded benchmark epic.\n- Only if useful, run a material-only ablation on one informative case; do not automatically triple the full study.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.\nExecution gate freezes the final CPU-prepared kb-native-pilot-final identities; prior CPU-only preparations are retained.\nRetain kb-native-pilot-final pre-admission failure; corrected controller Git-root path normalization uses kb-native-pilot-r2 with identical frozen agents and candidates.\nRetain r2 admitted runner dependency failure; r3 uses existing Miniconda Python with NumPy2.2.6 for both preparation and qualification.",
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/native-pilot.json, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md.\nAcceptance:\n- Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.\n- Start one A/B pair per family and independently repeat any claimed skill-level win or unstable result, within the declared initial cap. Count all attempts and search costs.\n- Validate generated kernels independently and compare complete caller-visible costs including preparation/update/extraction. Timing repetitions are not independent agent trials.\n- Report individual kernel promotion separately from skill-level evidence. A negative or inconclusive pilot is a legitimate result and must not expand into an unbounded benchmark epic.\n- Only if useful, run a material-only ablation on one informative case; do not automatically triple the full study.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.\nExecution gate freezes the final CPU-prepared kb-native-pilot-final identities; prior CPU-only preparations are retained.\nRetain kb-native-pilot-final pre-admission failure; corrected controller Git-root path normalization uses kb-native-pilot-r2 with identical frozen agents and candidates.\nRetain r2 admitted runner dependency failure; r3 uses existing Miniconda Python with NumPy2.2.6 for both preparation and qualification.\nRetain r3 cuBLAS binding failure; r4 fixes evaluator-only eager legacy-symbol fallback equally for all frozen candidates.",
       "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
       "produced_artifacts": [
         {
@@ -461,7 +463,7 @@
             "evaluation/results/native-v1/driver.py",
             "qualify",
             "--run-id",
-            "kb-native-pilot-r3"
+            "kb-native-pilot-r4"
           ],
           "cwd": ".",
           "timeout": 3600,

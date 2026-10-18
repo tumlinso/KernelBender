@@ -156,6 +156,17 @@ class EvaluationBoundaryTests(unittest.TestCase):
 
 
 class NativeRunnerContractTests(unittest.TestCase):
+    class SymbolLibrary:
+        def __init__(self, symbols: dict[str, object]) -> None:
+            self.symbols = symbols
+            self.lookups: list[str] = []
+
+        def __getattr__(self, name: str):
+            self.lookups.append(name)
+            if name in self.symbols:
+                return self.symbols[name]
+            raise AttributeError(name)
+
     class FakeCuda:
         def __init__(self) -> None:
             self.memory = {}
@@ -187,6 +198,22 @@ class NativeRunnerContractTests(unittest.TestCase):
 
         def __exit__(self, _kind, _value, _traceback):
             return None
+
+    def test_cublas_versioned_symbols_do_not_evaluate_absent_legacy_fallbacks(self) -> None:
+        for versioned, legacy in (("cublasCreate_v2", "cublasCreate"),
+                                  ("cublasDestroy_v2", "cublasDestroy")):
+            with self.subTest(symbol=versioned):
+                symbol = object()
+                library = self.SymbolLibrary({versioned: symbol})
+                self.assertIs(native_runner._versioned_symbol(library, versioned, legacy), symbol)
+                self.assertEqual(library.lookups, [versioned])
+
+    def test_cublas_legacy_symbol_is_looked_up_only_when_versioned_symbol_is_absent(self) -> None:
+        symbol = object()
+        library = self.SymbolLibrary({"cublasCreate": symbol})
+        self.assertIs(native_runner._versioned_symbol(
+            library, "cublasCreate_v2", "cublasCreate"), symbol)
+        self.assertEqual(library.lookups, ["cublasCreate_v2", "cublasCreate"])
 
     def test_updated_weights_are_uploaded_between_same_process_calls(self) -> None:
         import numpy as np
