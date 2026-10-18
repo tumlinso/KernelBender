@@ -1,0 +1,39 @@
+{
+  "source_paths_read": [
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/task/E01-consumer-output.md",
+    "/task/E02-per-position-state.md",
+    "/task/E03-reuse-and-invalidation.md",
+    "/sources/atlas/NEED_INDEX.md",
+    "/sources/atlas/mechanisms/M24.md",
+    "/sources/atlas/compositions/C13.md",
+    "/sources/atlas/reference/R15.md",
+    "/sources/atlas/mechanisms/M01.md",
+    "/sources/atlas/compositions/C06.md",
+    "/sources/atlas/mechanisms/M08.md",
+    "/sources/atlas/mechanisms/M18.md",
+    "/sources/atlas/compositions/C16.md",
+    "/sources/atlas/compositions/C07.md"
+  ],
+  "meaningful_unknowns": [
+    "E01 dimensions B,K,M,P and the actual representative shape distribution are unspecified, preventing a universal route choice.",
+    "No target GPU, library version, launch/transfer context, or timing evidence is supplied; all speed claims remain hypotheses.",
+    "E02 does not specify whether rule and mask changes are common or independent across sites/epochs, which affects specialization and preparation amortization.",
+    "E03 omits update staging location, consumer scheduling/stream topology, and scale grouping values; crossover and transfer costs require measurement.",
+    "Floating-point reduction order and supported library epilogues may affect tolerance and performance."
+  ],
+  "execution_limits": {
+    "wrapper": "/tmp/kernelbender-trials-01a14ea9/probe-1-A/run",
+    "maximum_commands": 12,
+    "maximum_seconds_per_command": 60,
+    "total_seconds_from_first_command": 300,
+    "wrapper_invocations_used": 9,
+    "restrictions_observed": [
+      "No GPU or kernel execution",
+      "No network access",
+      "Reads limited to /task and /sources",
+      "Writes limited to /work"
+    ]
+  }
+}

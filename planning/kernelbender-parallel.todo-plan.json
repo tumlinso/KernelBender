@@ -382,7 +382,9 @@
             "tests",
             "planning/kernelbender-bootstrap"
           ],
-          "track_git_head": false
+          "track_git_head": false,
+          "accepted": true,
+          "note": "Root accepts four retained fresh Luna behavior sessions, two paired blocks covering six prompts under matched configured model/effort/call/time caps. Independent researcher reviewed actual constructions and citations: both arms useful, no consequential failure requiring revision, no incremental-benefit claim. Treatment command-session time higher in both blocks; token costs unavailable. Raw briefs/receipts/commands, source hashes, negative findings and isolation limits retained. Native skill remains frozen25b4b16 and experimental."
         }
       ]
     },

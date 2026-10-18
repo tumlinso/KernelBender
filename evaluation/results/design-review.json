@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "stage": "design-v1",
+  "status": "evaluated_not_promoted",
+  "paired_blocks": 2,
+  "probe_count": 6,
+  "independent_review": "evaluation/results/design-v1/REVIEW.md",
+  "retained_results": "evaluation/results/design-v1",
+  "finding": "Both arms useful; same principal design families. No incremental benefit established.",
+  "limits": [
+    "Design briefs only; no GPU results.",
+    "Broader model tools instruction-constrained; no adversarial blindness qualification.",
+    "Two paired blocks; token costs unavailable."
+  ]
+}

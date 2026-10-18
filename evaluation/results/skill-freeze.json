@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "skill_commit": "25b4b167c73caf4f6540132013e10f58c0e43f73",
+  "evaluator_commit": "17072cb879ea81d70c7f1e9077966713337df5d4",
+  "status": "frozen_for_bounded_native_pilot",
+  "revision_passes": 0,
+  "reason": "Independent behavioral review found no consequential failure requiring skill correction.",
+  "skill_path": "skills/kernelbender",
+  "staged_snapshot": "/tmp/kernelbender-trials-01a14ea9/design-B/skill",
+  "policy": "evaluation/results/design-v1/trial-policy.json"
+}

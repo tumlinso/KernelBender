@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "skill_commit": "25b4b16",
+  "stage_1": {
+    "paired_blocks": 2,
+    "probes_per_block": 3,
+    "profile": "implementer",
+    "configured_model": "gpt-6-luna",
+    "configured_reasoning_effort": "xhigh",
+    "wall_seconds_per_agent": 300,
+    "max_commands_per_agent": 12,
+    "gpu_allowed": false,
+    "network_allowed": false
+  },
+  "stage_2": {
+    "families": 3,
+    "initial_pairs_per_family": 1,
+    "profile": "implementer",
+    "configured_model": "gpt-6-luna",
+    "configured_reasoning_effort": "xhigh",
+    "wall_seconds_per_agent": 420,
+    "max_candidates_per_agent": 1,
+    "max_builds_per_agent": 2,
+    "build_timeout_seconds": 60,
+    "candidate_gpu_access": false,
+    "evaluation_gpu": "controller_admitted_root_only"
+  },
+  "claim_policy": "No skill-level win without an independent paired repeat; remaining session slots permit one informative repeat pair. Unrepeated kernel wins remain task-local and experimental.",
+  "scope_note": "No native trial begins before KB05 acceptance; GPU pilot requires bound controller-mediated gates. All attempts and failed builds are retained.",
+  "isolation": "bwrap mount/network namespace enforced for every candidate command; full model tool access remains instruction-controlled and is not an adversarial isolation claim."
+}

@@ -1,0 +1,54 @@
+{
+  "artifact_paths": ["/work/briefs.md", "/work/receipt.json"],
+  "source_paths_read": [
+    "/task/E04-architecture-reachability.md",
+    "/task/E05-evidence-to-experiment.md",
+    "/task/E06-conventional-control.md",
+    "/kernelbender/SKILL.md",
+    "/kernelbender/references/architecture.md",
+    "/kernelbender/references/need-map.md",
+    "/kernelbender/references/experiments.md",
+    "/kernelbender/references/sources.md",
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/sources/cuda/references/common/compute-libraries.md",
+    "/sources/cuda/references/architectures/volta/router.md",
+    "/sources/cuda/references/architectures/volta/programming-guide.md",
+    "/sources/cuda/references/architectures/hopper/router.md",
+    "/sources/cuda/references/profiling/hot-kernel.md",
+    "/sources/cuda/references/profiling/diagnostics-workflow.md",
+    "/sources/atlas/NEED_INDEX.md",
+    "/sources/atlas/mechanisms/M37.md",
+    "/sources/atlas/reference/R06.md",
+    "/sources/atlas/reference/R09.md",
+    "/sources/atlas/reference/R11.md",
+    "/sources/kernelwiki/SKILL.md",
+    "/sources/kernelwiki/references/volta.md",
+    "/sources/ncu-report-skill/SKILL.md",
+    "/sources/ncu-report-skill/reference/10-volta.md",
+    "/sources/kda/docs/experiment-engine.md",
+    "/sources/kda/docs/agent-flow.md"
+  ],
+  "meaningful_unknowns": {
+    "E04": [
+      "Exact tile shape, address/alignment rules, tail handling, data type, and required arithmetic order.",
+      "Original producer/consumer membership, barrier arrival/count semantics, visibility scope, and whether all CTA threads can reach a replacement barrier.",
+      "Actual CUDA 12.9 compiler/API availability and generated sm_70 code for the eventual implementation."
+    ],
+    "E05": [
+      "The fixture is constructed; workload distribution, actual binaries, clocks, timing protocol, and profiler metric validity are not supplied.",
+      "Current A race status is unknown; the earlier A version had a race, so its performance evidence cannot serve as a valid baseline.",
+      "The exact source locations and NCU counters for the dependent consumer, branch, conversions, and register limits are absent."
+    ],
+    "E06": [
+      "Target GPU/toolchain and the concrete row-major cuBLAS wrapper/leading-dimension mapping are not specified here.",
+      "No adjacent producer/consumer contract is supplied for deciding whether a larger composition could save a pass while preserving every C output."
+    ]
+  },
+  "execution_limits": [
+    "All filesystem and shell access used only /tmp/kernelbender-trials-01a14ea9/probe-2-B/run.",
+    "Task wrapper limits: at most 12 commands, 60 seconds each, and 300 seconds total from the first command.",
+    "Access was confined to /task and /sources plus private writable /work; no other trial, evaluator, repository, memory, host source, network, or GPU was accessed.",
+    "No kernels were implemented or run. No compiler, sanitizer, benchmark, profiler, or test was run; all recommendations are designs, not validation claims."
+  ]
+}

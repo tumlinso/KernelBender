@@ -1,0 +1,28 @@
+{
+  "source_paths_read": [
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/task/E04-architecture-reachability.md",
+    "/task/E05-evidence-to-experiment.md",
+    "/task/E06-conventional-control.md",
+    "/sources/atlas/NEED_INDEX.md",
+    "/sources/cuda/references/architectures/volta/router.md",
+    "/sources/atlas/reference/R06.md",
+    "/sources/atlas/mechanisms/M16.md",
+    "/sources/cuda/references/profiling/hot-kernel.md",
+    "/sources/atlas/sources/S03.md",
+    "/sources/cuda/references/architectures/volta/programming-guide.md"
+  ],
+  "meaningful_unknowns": [
+    "E04 tile shapes, strides, alignment, boundary fill, layout/swizzle, and precise Hopper barrier participation contract are not specified.",
+    "E04 CUDA 12.9 compiler output and exact public API availability/architecture gating were not independently checked.",
+    "E05 current A race status, operator oracle/input distribution, source attribution, and valid sanitizer/counter results are absent.",
+    "E06 surrounding pipeline reuse or fusion opportunities are not specified."
+  ],
+  "execution_limits": {
+    "wrapper": "/tmp/kernelbender-trials-01a14ea9/probe-2-A/run",
+    "enforced_limits": "12 commands maximum; 60 seconds per command; 300 seconds from first command.",
+    "actual_scope": "Read-only /task and /sources; wrote only /work/briefs.md and /work/receipt.json; no kernel implementation, GPU execution, network, other trial, evaluator, repository, memory, or host source access.",
+    "validation": "Artifacts were written and checked for non-empty content and per-brief word counts by the writing command; no kernels or tests were run."
+  }
+}

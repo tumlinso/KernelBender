@@ -1,0 +1,60 @@
+{
+  "artifacts": [
+    "/work/briefs.md",
+    "/work/receipt.json"
+  ],
+  "source_paths_read": [
+    "/sources/cuda/SKILL.md",
+    "/sources/cuda/references/common/machine-aligned-design.md",
+    "/sources/cuda/references/common/compute-libraries.md",
+    "/kernelbender/SKILL.md",
+    "/kernelbender/assets/design-brief.md",
+    "/kernelbender/references/caller.md",
+    "/kernelbender/references/bridges/lifetime.md",
+    "/kernelbender/references/bridges/bitplanes.md",
+    "/kernelbender/references/bridges/ownership.md",
+    "/kernelbender/references/experiments.md",
+    "/kernelbender/examples/lowbit-lifetime.md",
+    "/sources/atlas/NEED_INDEX.md",
+    "/sources/atlas/mechanisms/M06.md",
+    "/sources/atlas/mechanisms/M14.md",
+    "/sources/atlas/compositions/C06.md",
+    "/sources/atlas/compositions/C16.md",
+    "/sources/atlas/reference/R15.md",
+    "/sources/kernelwiki/wiki/techniques/fine-grained-quantization.md",
+    "/sources/kernelwiki/wiki/techniques/kernel-fusion.md",
+    "/sources/kernelwiki/wiki/techniques/chunk-parallelism.md",
+    "/sources/kernelwiki/wiki/techniques/register-budgeting.md",
+    "/sources/kernelwiki/wiki/kernels/volta-w4a16.md",
+    "/sources/kernelwiki/wiki/techniques/volta-grouping-and-decoding.md",
+    "/sources/kda/README.md",
+    "/sources/ncu-report-skill/SKILL.md"
+  ],
+  "task_prompts_read": [
+    "/task/E01-consumer-output.md",
+    "/task/E02-per-position-state.md",
+    "/task/E03-reuse-and-invalidation.md"
+  ],
+  "meaningful_unknowns": [
+    "No GPU architecture, device, CUDA toolkit, or library versions are specified; architecture-specific instruction and performance choices remain open.",
+    "E01 omits B, K, M, P sizes and the full batch layout; no numeric crossover or reassociation error bound can be established from the prompt alone.",
+    "E01 reassociation must be checked against the direct FP32 oracle; finite tests do not prove the tolerance for all finite inputs without a bound.",
+    "E02 does not specify whether multiple independent arrays are processed together, which affects CTA occupancy for small N.",
+    "E02 does not specify when per-step changed masks become available; host-delivered masks may impose a step boundary.",
+    "E03 does not define an accumulation order beyond direct FP32 accumulation; both decoded and prepared routes must use the same oracle contract and pass the stated tolerance."
+  ],
+  "execution_limits": {
+    "all_successful_filesystem_reads_and_writes_used_the_isolated_wrapper": true,
+    "maximum_wrapper_commands": 12,
+    "gpu_access": false,
+    "kernel_implementation_or_execution": false,
+    "nsight_compute_collection": false,
+    "network_access": false,
+    "writable_scope": "/work only"
+  },
+  "validation": {
+    "design_briefs_written": true,
+    "kernels_or_tests_run": false,
+    "performance_claims": "None; recommendations are hypotheses and conditional designs only."
+  }
+}

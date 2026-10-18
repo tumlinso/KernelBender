@@ -1,0 +1,38 @@
+[
+  {
+    "trial": "probe-1-A",
+    "commands": 12,
+    "elapsed_first_to_last_end_seconds": 147.0031225681305,
+    "command_runtime_seconds": 0.289961576461792,
+    "command_failures": 1,
+    "receipt_json_valid": true,
+    "brief_bytes": 5555
+  },
+  {
+    "trial": "probe-1-B",
+    "commands": 12,
+    "elapsed_first_to_last_end_seconds": 178.51118683815002,
+    "command_runtime_seconds": 0.20898723602294922,
+    "command_failures": 0,
+    "receipt_json_valid": true,
+    "brief_bytes": 6791
+  },
+  {
+    "trial": "probe-2-A",
+    "commands": 10,
+    "elapsed_first_to_last_end_seconds": 105.3412983417511,
+    "command_runtime_seconds": 0.20245146751403809,
+    "command_failures": 0,
+    "receipt_json_valid": true,
+    "brief_bytes": 5387
+  },
+  {
+    "trial": "probe-2-B",
+    "commands": 9,
+    "elapsed_first_to_last_end_seconds": 130.02387046813965,
+    "command_runtime_seconds": 0.14525389671325684,
+    "command_failures": 0,
+    "receipt_json_valid": true,
+    "brief_bytes": 6074
+  }
+]

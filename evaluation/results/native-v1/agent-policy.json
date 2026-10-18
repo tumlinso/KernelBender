@@ -1,0 +1,27 @@
+{
+  "families": 3,
+  "initial_pairs_per_family": 1,
+  "profile": "implementer",
+  "configured_model": "gpt-6-luna",
+  "configured_reasoning_effort": "xhigh",
+  "wall_seconds_per_agent": 420,
+  "max_candidates_per_agent": 1,
+  "max_builds_per_agent": 2,
+  "build_timeout_seconds": 60,
+  "candidate_gpu_access": false,
+  "evaluation_gpu": "controller_admitted_root_only",
+  "max_commands_per_agent": 16,
+  "compile_helper_sha256": "8600d510ddf8d9b89f9fed22056509d82c06e87ab14de9b5bb259c518cd6b327",
+  "source_manifest_sha256": "bece90af4e2f9167c1abb9db793ce77f86810647dcf7421951819b6c1299e174",
+  "native_target": "V100 sm_70 CUDA12.9",
+  "dispatch_order": [
+    "bool-A",
+    "energy-B",
+    "dense-A",
+    "bool-B",
+    "energy-A",
+    "dense-B"
+  ],
+  "gpu_budget_seconds_per_family": 900,
+  "candidate_qualification": "Dedicated controller compute-sanitizer recipe with existing KDA sanitizer policy adapter for memcheck/racecheck, then KDA controller launcher validation/timing. No candidate agent GPU access."
+}
