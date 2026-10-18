@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "checks": [
+    "All JSON parses",
+    "Source IDs, hash syntax and locators",
+    "Markdown links and source citations",
+    "Both plan DAGs, IDs, notes, artifacts, scoped gates and lane assignments (structural only)",
+    "Draft skill metadata, declared substrate, example counts and evaluator separation"
+  ],
+  "errors": [],
+  "limits": [
+    "Structural package checks are not native Todo validation or application.",
+    "No model/skill efficacy trial, GPU execution or KDA installation was performed."
+  ]
+}

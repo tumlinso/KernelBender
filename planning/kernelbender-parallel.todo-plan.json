@@ -1,0 +1,680 @@
+{
+  "schema_version": 3,
+  "project": {
+    "name": "KernelBender"
+  },
+  "tasks": [
+    {
+      "id": "KB-01",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Author the selective design skill and caller handoff",
+      "objective": "Adopt/refine the drafted entry, caller questions, need map and brief; preserve the existing repository/Task authority instructions.",
+      "priority": 95,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "skills/kernelbender/SKILL.md",
+          "skills/kernelbender/assets",
+          "skills/kernelbender/references/caller.md",
+          "skills/kernelbender/references/need-map.md",
+          "README.md",
+          "AGENTS.md"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender",
+          "integration",
+          "evaluation",
+          "tests"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/DESIGN.md, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md, planning/kernelbender-bootstrap/draft/skills/kernelbender/SKILL.md.\nAcceptance:\n- Adopt/refine the drafted entry, caller questions, need map and brief; preserve the existing repository/Task authority instructions.\n- The same agent remains in control: no new agent invocation, hidden optimization loop, mandatory brainstorming quota or compulsory profiling of nonexistent kernels.\n- The brief provides an actual construction and decisive next action; conventional routing and consequential unknowns are handled explicitly.\n- The role is a design intervention, not a replacement for the continuing CUDA skill or Atlas.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "skill entry",
+          "path": "skills/kernelbender/SKILL.md"
+        },
+        {
+          "kind": "brief template",
+          "path": "skills/kernelbender/assets/design-brief.md"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-01-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "skills/kernelbender/SKILL.md",
+            "skills/kernelbender/assets",
+            "skills/kernelbender/references/caller.md",
+            "skills/kernelbender/references/need-map.md",
+            "README.md",
+            "AGENTS.md",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-02",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Adopt mechanism bridges with scoped architecture and source evidence",
+      "objective": "Adopt ten compact problem-to-mechanism bridges and four worked examples, adding only material needed to make them accurate/useful.",
+      "priority": 90,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "skills/kernelbender/references/bridges",
+          "skills/kernelbender/references/architecture.md",
+          "skills/kernelbender/references/experiments.md",
+          "skills/kernelbender/references/sources.md",
+          "skills/kernelbender/examples"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender/SKILL.md",
+          "skills/kernelbender/assets",
+          "skills/kernelbender/references/caller.md",
+          "skills/kernelbender/references/need-map.md"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-01"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/KNOWLEDGE.md, planning/kernelbender-bootstrap/sources/ADJUDICATIONS.md, planning/kernelbender-bootstrap/draft/skills/kernelbender/references.\nAcceptance:\n- Adopt ten compact problem-to-mechanism bridges and four worked examples, adding only material needed to make them accurate/useful.\n- Each bridge has semantic construction, source/target/access limits, lifetime costs and a real falsifier; claims are not silently promoted.\n- Volta-specific forms remain scoped; newer-generation contrasts are documented, not claimed locally qualified.\n- The existing CUDA/Atlas content is referenced and selectively synthesized, not bulk copied, replaced or edited; attribution/licensing and private-source boundaries remain explicit.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "bridges",
+          "path": "skills/kernelbender/references/bridges"
+        },
+        {
+          "kind": "sources",
+          "path": "skills/kernelbender/references/sources.md"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-02-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "skills/kernelbender/references/bridges",
+            "skills/kernelbender/references/architecture.md",
+            "skills/kernelbender/references/experiments.md",
+            "skills/kernelbender/references/sources.md",
+            "skills/kernelbender/examples",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-03",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Validate the portable package and task-local KDA consumer",
+      "objective": "Add a small CPU content/link/frontmatter test suite and check clean installation of only skills/kernelbender; do not install evaluation answers.",
+      "priority": 85,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "tests/test_skill_contract.py",
+          "integration",
+          "scripts",
+          "planning/component-consumer-results.md"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-01"
+        },
+        {
+          "type": "task",
+          "task_id": "KB-02"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md, planning/kernelbender-bootstrap/integration/KDA-INSERTION.md, planning/kernelbender-bootstrap/draft/skills/kernelbender/assets/design-brief.md.\nAcceptance:\n- Add a small CPU content/link/frontmatter test suite and check clean installation of only skills/kernelbender; do not install evaluation answers.\n- Demonstrate a task-local prompt/read/brief handoff using existing KDA documents/CLI conventions; register only actual source and do not invent engine fields.\n- Explicit invocation works; activation descriptions distinguish special design from routine CUDA/profiling. Record host-specific registration actually used.\n- No KDA source changes here: produce the narrowly scoped integration proposal for the separate KDA task.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "consumer result",
+          "path": "planning/component-consumer-results.md"
+        },
+        {
+          "kind": "consumer integration",
+          "path": "integration/KDA-INSERTION.md"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-03-CPU",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_skill_contract.py"
+          ],
+          "cwd": ".",
+          "timeout": 120,
+          "input_paths": [
+            "tests/test_skill_contract.py",
+            "skills/kernelbender",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        },
+        {
+          "id": "KB-03-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "tests/test_skill_contract.py",
+            "integration",
+            "scripts",
+            "planning/component-consumer-results.md",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-04",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Prepare independent evaluation tasks and correctness boundaries",
+      "objective": "Turn the supplied specifications into six small design probes and two specialized native task families plus a conventional control using the existing KDA task/evaluator contract.",
+      "priority": 85,
+      "parallel_policy": "parallel_safe",
+      "scope": {
+        "exclusive_paths": [
+          "evaluation",
+          "tests/test_evaluation_contracts.py"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender/SKILL.md",
+          "skills/kernelbender/assets",
+          "skills/kernelbender/references/caller.md",
+          "skills/kernelbender/references/need-map.md"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-01"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/scenarios.json, planning/kernelbender-bootstrap/evaluation/native-pilot.json.\nAcceptance:\n- Turn the supplied specifications into six small design probes and two specialized native task families plus a conventional control using the existing KDA task/evaluator contract.\n- Create independent references, corrected valid baselines and withheld inputs; verify the exact Boolean rules, numerical semantics, preparation/update costs and boundary cases.\n- Keep reviewer hints, holdout results and other-arm transcripts out of candidate-visible context. Do not make privacy depend on a directory name.\n- Freeze workload and acceptance semantics before comparing agents; choose actual host/model/GPU budgets before execution, not after results.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "frozen evaluation protocol",
+          "path": "evaluation/PROTOCOL.md"
+        },
+        {
+          "kind": "evaluation reference tests",
+          "path": "tests/test_evaluation_contracts.py"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-04-CPU",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_evaluation_contracts.py"
+          ],
+          "cwd": ".",
+          "timeout": 120,
+          "input_paths": [
+            "tests/test_evaluation_contracts.py",
+            "skills/kernelbender",
+            "planning/kernelbender-bootstrap",
+            "evaluation"
+          ],
+          "track_git_head": false
+        },
+        {
+          "id": "KB-04-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "evaluation",
+            "tests/test_evaluation_contracts.py",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-05",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Test design behavior against the existing competent workflow",
+      "objective": "Run bounded fresh-context A/B design probes with the same model/settings, source/tool access and effort budget. A includes current CUDA machine-aligned guidance and Atlas access.",
+      "priority": 80,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "evaluation/results",
+          "evaluation/REPORT.md",
+          "skills/kernelbender",
+          "tests"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender",
+          "integration",
+          "evaluation",
+          "tests"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-02"
+        },
+        {
+          "type": "task",
+          "task_id": "KB-03"
+        },
+        {
+          "type": "task",
+          "task_id": "KB-04"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/design/RESEARCH.md, planning/kernelbender-bootstrap/evaluation/scenarios.json.\nAcceptance:\n- Run bounded fresh-context A/B design probes with the same model/settings, source/tool access and effort budget. A includes current CUDA machine-aligned guidance and Atlas access.\n- Review concrete constructions, semantic limits, context overhead, unlike families and decisive experiments; do not substitute a model novelty score for evidence.\n- Correct consequential failures and use at most a small declared revision pass before freezing the native-pilot version. Preserve failed/negative outcomes.\n- Record measured activation/behavior versus untested claims. A completed but unhelpful intervention is evaluated_not_promoted, not an invented success.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "design probe review",
+          "path": "evaluation/results/design-review.json"
+        },
+        {
+          "kind": "frozen skill identity",
+          "path": "evaluation/results/skill-freeze.json"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated",
+          "evaluated_not_promoted"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-05-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "evaluation/results",
+            "evaluation/REPORT.md",
+            "skills/kernelbender",
+            "tests",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-06",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Run the bounded paired native pilot and assess incremental value",
+      "objective": "Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.",
+      "priority": 75,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "evaluation/results",
+          "evaluation/REPORT.md",
+          "runs"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender",
+          "integration",
+          "evaluation",
+          "tests"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-05"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/evaluation/native-pilot.json, planning/kernelbender-bootstrap/design/CALLER_INTEGRATION.md.\nAcceptance:\n- Use existing KDA evaluation and CUDA controller/ported NCU skill, not a new optimizer or profiling framework. Bind actual GPU execution gates through the installed authority before running.\n- Start one A/B pair per family and independently repeat any claimed skill-level win or unstable result, within the declared initial cap. Count all attempts and search costs.\n- Validate generated kernels independently and compare complete caller-visible costs including preparation/update/extraction. Timing repetitions are not independent agent trials.\n- Report individual kernel promotion separately from skill-level evidence. A negative or inconclusive pilot is a legitimate result and must not expand into an unbounded benchmark epic.\n- Only if useful, run a material-only ablation on one informative case; do not automatically triple the full study.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "native pilot report",
+          "path": "evaluation/results/native-pilot.json"
+        },
+        {
+          "kind": "assessment",
+          "path": "evaluation/REPORT.md"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated",
+          "evaluated_not_promoted"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-06-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "evaluation/results",
+            "evaluation/REPORT.md",
+            "runs",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-07",
+      "parent_id": "KB-000",
+      "kind": "task",
+      "title": "Finalize the component and issue a versioned KDA handoff",
+      "objective": "Choose full adoption, narrower activation, substrate-only simplification or experimental status from the actual results; do not claim general creativity gains from package checks.",
+      "priority": 70,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "README.md",
+          "skills/kernelbender",
+          "integration",
+          "tests",
+          "planning/IMPLEMENTATION-HANDOFF.md",
+          "evaluation/REPORT.md"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "skills/kernelbender",
+          "integration",
+          "evaluation",
+          "tests"
+        ],
+        "forbidden_paths": []
+      },
+      "depends_on": [
+        {
+          "type": "task",
+          "task_id": "KB-03"
+        },
+        {
+          "type": "task",
+          "task_id": "KB-06"
+        }
+      ],
+      "notes": "Authoritative design inputs: planning/kernelbender-bootstrap/DESIGN.md, planning/kernelbender-bootstrap/design/EVALUATION.md, planning/kernelbender-bootstrap/integration/KDA-INSERTION.md, planning/kernelbender-bootstrap/planning/INTAKE.md.\nAcceptance:\n- Choose full adoption, narrower activation, substrate-only simplification or experimental status from the actual results; do not claim general creativity gains from package checks.\n- Run compact package/regression checks and preserve evidence/source identities. The shipped skill excludes evaluator answer notes and raw private archives.\n- Supply the tested KernelBender commit, actual skill path, evidence-qualified status and minimal KDA changes for the separate integration authority.\n- Keep unresolved performance opportunities small and concrete; no CUDA/Atlas replacement, additional agent system or all-architecture framework is added.\nPreserve existing unrelated work. Use current native task lifecycle; never edit the Todo database/projections by hand.",
+      "next_action": "Read the task notes and linked design/material, then execute only this bounded outcome.",
+      "produced_artifacts": [
+        {
+          "kind": "component handoff",
+          "path": "planning/IMPLEMENTATION-HANDOFF.md"
+        }
+      ],
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-07-CPU",
+          "type": "command",
+          "required": true,
+          "argv": [
+            "python3",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_skill_contract.py"
+          ],
+          "cwd": ".",
+          "timeout": 120,
+          "input_paths": [
+            "tests",
+            "skills/kernelbender",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        },
+        {
+          "id": "KB-07-REVIEW",
+          "type": "manual",
+          "required": true,
+          "description": "Review the native notes acceptance outcomes and actual artifacts; file existence alone is not completion.",
+          "input_paths": [
+            "README.md",
+            "skills/kernelbender",
+            "integration",
+            "tests",
+            "planning/IMPLEMENTATION-HANDOFF.md",
+            "evaluation/REPORT.md",
+            "planning/kernelbender-bootstrap"
+          ],
+          "track_git_head": false
+        }
+      ]
+    },
+    {
+      "id": "KB-000",
+      "kind": "epic",
+      "title": "Deliver a grounded, evaluated KernelBender design skill",
+      "objective": "Aggregate the seven bounded component outcomes; no coordinator framework or speculative scope expansion.",
+      "priority": 0,
+      "parallel_policy": "serial",
+      "scope": {
+        "exclusive_paths": [
+          "planning/IMPLEMENTATION-HANDOFF.md"
+        ],
+        "read_paths": [
+          "planning/kernelbender-bootstrap",
+          "evaluation/REPORT.md"
+        ],
+        "forbidden_paths": []
+      },
+      "notes": "Close after all seven component tasks finish. A completed evaluation can report no added value; the handoff must state that truthfully. Permanent KDA integration is separately scoped.",
+      "next_action": "Close after the component handoff and all child outcome gates, not before.",
+      "result_policy": {
+        "allowed_dispositions": [
+          "validated"
+        ]
+      },
+      "gates": [
+        {
+          "id": "KB-000-KB-01-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-01",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-02-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-02",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-03-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-03",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-04-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-04",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-05-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-05",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-06-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-06",
+          "status": "done",
+          "track_git_head": false
+        },
+        {
+          "id": "KB-000-KB-07-DONE",
+          "type": "task_state",
+          "required": true,
+          "task_id": "KB-07",
+          "status": "done",
+          "track_git_head": false
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "KB-DESIGN-SKILL-RUN-1",
+      "root_task_id": "KB-000",
+      "charter": {
+        "objective": "Turn the source-backed design into a selective KDA-compatible computational invention skill and measure its incremental usefulness.",
+        "boundaries": [
+          "Instruction/reference intervention; no new agent controller, compiler, profiler or optimizer.",
+          "CUDA and Atlas remain independent sources; no replacement/mutation in this component plan.",
+          "Current task numerical/semantic contracts and existing CUDA execution controls remain authoritative.",
+          "Equal-budget comparison includes the current machine-aligned CUDA method and Atlas access.",
+          "No GPU or model evaluation outcomes are preclaimed by the bootstrap.",
+          "KDA permanent changes belong to the companion plan in the kda workspace."
+        ],
+        "design_inputs": [
+          "planning/kernelbender-bootstrap/DESIGN.md",
+          "planning/kernelbender-bootstrap/design/EVALUATION.md",
+          "planning/kernelbender-bootstrap/planning/WORK.md"
+        ]
+      },
+      "lanes": [
+        {
+          "id": "KB-ROOT",
+          "role": "implementer",
+          "workspace": {
+            "mode": "contract_split"
+          },
+          "tasks": [
+            "KB-01",
+            "KB-05",
+            "KB-06",
+            "KB-07",
+            "KB-000"
+          ]
+        },
+        {
+          "id": "KB-KNOWLEDGE",
+          "parent_lane_id": "KB-ROOT",
+          "role": "implementer",
+          "workspace": {
+            "mode": "contract_split"
+          },
+          "tasks": [
+            "KB-02",
+            "KB-03"
+          ]
+        },
+        {
+          "id": "KB-EVALUATION",
+          "parent_lane_id": "KB-ROOT",
+          "role": "implementer",
+          "workspace": {
+            "mode": "contract_split"
+          },
+          "tasks": [
+            "KB-04"
+          ]
+        }
+      ]
+    }
+  ]
+}

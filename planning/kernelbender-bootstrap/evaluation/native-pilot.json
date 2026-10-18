@@ -1,0 +1,97 @@
+{
+  "status": "design_specification_not_a_runnable_kda_task_manifest",
+  "arm_policy": "A=current competent stack; B=same plus KernelBender; fresh independent contexts, matched budgets and trusted inputs",
+  "search_units": "Agent implementation attempts are independent units; GPU timing rounds are repeated measurements within one attempt.",
+  "budget_policy": "Freeze model/settings, wall-clock/token budget, candidate/build count and controller-admitted GPU budget before either arm. Start one pair per family; at most one independent repeat pair per family for any claimed skill-level win. Record every failed attempt.",
+  "families": [
+    {
+      "id": "KB-NATIVE-BOOL",
+      "name": "Reused local categorical transition",
+      "solver_visible_operator": "A periodic one-dimensional population has a two-bit state at every site. Apply the explicitly supplied shared transition rule synchronously for T steps from the supplied states and mask. Return the required final states and selected aggregate specified by the contract. The rule is fixed during an epoch; all initial state values are valid.",
+      "proposed_cases": {
+        "N": [
+          31,
+          33,
+          1024,
+          65537
+        ],
+        "T": [
+          1,
+          8,
+          32
+        ],
+        "domain": "all four states, boundary patterns and nontrivial masks; select a few discriminating cells, not the Cartesian product"
+      },
+      "evaluator_only_notes": "Provide one explicit simple rule as a truth table over local state, one neighbor and mask bit. The CPU oracle executes simultaneous updates with double buffers and exact integer semantics. Preserve periodic boundaries. Do not choose a rule whose output is constant or intentionally fits only one canned answer. A scalar/library-style native baseline is independent from candidate code. Potential constructions include packed Boolean state, standard vectorization and finite lookup; none is mandatory.",
+      "objective": "Complete epoch/transition/output latency, including representation entry/exit; report steady-state separately only with justified lifetime. Space is a separate metric.",
+      "must_validate": [
+        "All local truth-table combinations",
+        "Periodic and block/word boundaries",
+        "Full final-state equality and required aggregate",
+        "T=0 identity guard if included in contract",
+        "Updated masks/rule epochs cannot use stale state",
+        "No unrequested intermediate-output omission"
+      ],
+      "leakage_note": "Not identical to the instructional threshold example. Even so, this is transfer within a taught mechanism family, not proof of unconstrained invention."
+    },
+    {
+      "id": "KB-NATIVE-OBSERVE",
+      "name": "Only squared response energy is observable",
+      "solver_visible_operator": "For every query row x, return the squared Euclidean norm of xW. W is provided and fixed for the explicitly specified update epoch. Do not return xW. Inputs, output dtype, finite-precision tolerance and permitted reordering are fixed by the evaluator. Include parameter updates at the declared frequency.",
+      "proposed_cases": {
+        "B": [
+          1,
+          8
+        ],
+        "K": [
+          32,
+          96
+        ],
+        "N": [
+          256,
+          1024
+        ],
+        "uses_per_update": [
+          1,
+          8,
+          64
+        ],
+        "domain": "bounded represented FP32 values with mixed signs and cancellation/stress cases within a documented finite output range"
+      },
+      "evaluator_only_notes": "The independent oracle forms xW and its squared norm in binary64 over represented inputs. An alternative identity uses the Gram form x(WW^T)x^T, but this must never be leaked as a mandatory solution hint. It only implements the allowed observable when numerical rules permit it. A strict intermediate-rounding variant is a separate rejection/guard probe, not an excuse to relax tolerance. Preparation cost and changed W are included; retaining an incorrect stale Gram matrix fails. Other constructions may win.",
+      "objective": "Whole update epoch cost and per-query latency under the same caller-defined aggregation; no free preparation. Compare to the best valid direct library+reduction path.",
+      "must_validate": [
+        "Every output against independent oracle",
+        "Nonzero and changed weights",
+        "Short and long epochs",
+        "Near-zero results and varying scales",
+        "Specified tolerance fixed before tuning",
+        "Required operation cannot specialize to known benchmark vectors"
+      ],
+      "leakage_note": "A new quadratic observable differs from the installed two-linear-map example. Do not claim novelty solely because the algebraic identity is rediscovered."
+    },
+    {
+      "id": "KB-NATIVE-CONTROL",
+      "name": "Regular dense GEMM without special structure",
+      "solver_visible_operator": "Compute the specified regular GEMM for arbitrary represented inputs with fixed numerical/shape contract and a strong valid library baseline. There is no special sparsity, reused output or permission to change the operation.",
+      "proposed_cases": {
+        "shapes": [
+          "A moderate square case appropriate to the target",
+          "One supported rectangular case"
+        ],
+        "note": "Freeze sizes and baseline before exposing either arm; no need to challenge every library algorithm."
+      },
+      "evaluator_only_notes": "A correct conventional/library recommendation is successful control behavior. Count unnecessary design/candidate overhead. Do not force B to invent a custom kernel to receive a result.",
+      "objective": "Best valid full operator within matched search budget; report design effort and regressions.",
+      "must_validate": [
+        "Independent numerical checks",
+        "Fresh input values and nontrivial alpha/beta where specified",
+        "No inferred data sparsity or changed precision",
+        "Baseline retained when nothing beats it"
+      ],
+      "leakage_note": "This is a restraint/overhead control, not a creativity challenge."
+    }
+  ],
+  "results": null,
+  "next_step": "The implementing evaluator creates actual independent task code/contracts and admitted runner settings; no kernel or model trial was executed while preparing this package."
+}

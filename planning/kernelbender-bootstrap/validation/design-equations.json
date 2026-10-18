@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "groups": [
+    {
+      "name": "per-position full-adder identity",
+      "cases": 8,
+      "result": "passed"
+    },
+    {
+      "name": "bitplane threshold preserves per-position multiplicity and tails",
+      "cases": 200,
+      "result": "passed",
+      "limit": "Symbolic integer-word CPU behavior, not warp mapping or GPU throughput"
+    },
+    {
+      "name": "linear consumer reassociation and quadratic observable identity",
+      "cases": 80,
+      "result": "passed",
+      "limit": "Exact bounded integer algebra; no claim of identical finite-precision evaluation"
+    },
+    {
+      "name": "required intermediate rounding defeats naive reassociation",
+      "cases": 1,
+      "result": "counterexample confirmed",
+      "represented_inputs": [
+        1.0009765625,
+        1.0009765625,
+        1000.0
+      ],
+      "staged": 1001.953125,
+      "reassociated": 1001.9775390625,
+      "limit": "Explicit CPU IEEE formats, not proprietary Tensor Core arithmetic"
+    },
+    {
+      "name": "chronological affine-summary composition",
+      "cases": 40,
+      "result": "passed",
+      "limit": "Only the stated affine operator with available inputs"
+    },
+    {
+      "name": "permutation-compatible elementwise work versus changed reduction axes",
+      "cases": 2,
+      "result": "passed"
+    }
+  ],
+  "limits": [
+    "Finite CPU algebra/counterexample checks only.",
+    "No native kernel compilation, GPU profiling, model trial or skill-effectiveness claim."
+  ]
+}

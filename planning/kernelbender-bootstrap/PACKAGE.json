@@ -1,0 +1,32 @@
+{
+  "package": "KernelBender research/design and native Todo bootstrap",
+  "prepared_date": "2026-10-18",
+  "status": "design_complete_implementation_not_applied",
+  "native_plan_schema": 3,
+  "component_tasks": 7,
+  "component_aggregate_tasks": 1,
+  "kda_integration_tasks": 1,
+  "mechanism_bridges": 10,
+  "worked_examples": 4,
+  "design_probes": 6,
+  "native_pilot_families": 3,
+  "local_source_entries": 55,
+  "external_source_entries": 16,
+  "skill_entry": "draft/skills/kernelbender/SKILL.md",
+  "canonical_skill_destination": "skills/kernelbender/SKILL.md",
+  "primary_plan": "planning/kernelbender.todo-plan.json",
+  "companion_plan": "planning/kda-integration.todo-plan.json",
+  "checks_executed": [
+    "structural package consistency",
+    "six finite CPU design-equation/counterexample groups",
+    "manifest and ZIP integrity"
+  ],
+  "not_executed": [
+    "native Todo validation/application",
+    "repository implementation/install",
+    "model trials",
+    "CUDA compilation/GPU execution",
+    "skill effectiveness measurement"
+  ],
+  "source_review_note": "Includes immediately preceding interrupted source review; exact-path reads for CUDA/Atlas, no agentic Project Control tools."
+}

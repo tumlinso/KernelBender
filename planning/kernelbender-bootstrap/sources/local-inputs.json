@@ -1,0 +1,555 @@
+{
+  "note": "Exact-path Project Control reads supply source identities, not execution evidence. Source review includes the immediately preceding interrupted portion of this same design task. Only selected relevant material was read; this is not an audit of every file in each repository.",
+  "sources": [
+    {
+      "id": "KB-README",
+      "project": "kernelbender",
+      "path": "README.md",
+      "content_sha256": "22488750e8312401bb3e5c2ab240b60e3bc979fc7bd71bbe5a925c645c39f6b5",
+      "role": "Current component purpose and nonimplementation bootstrap",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KB-AGENTS",
+      "project": "kernelbender",
+      "path": "AGENTS.md",
+      "content_sha256": "064dc45b45ac98a15a96aea7dad26c0f068ab3da9ea161d377e5a546a73d6d8e",
+      "role": "Repository and Todo authority boundaries",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KB-PLANNING",
+      "project": "kernelbender",
+      "path": "planning/README.md",
+      "content_sha256": "1c462709481e0f8e64d11ba36a458e35ec0f72b10106e0aba379c4f2c70baecd",
+      "role": "Native workspace root and planning ownership",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-ENGINE",
+      "project": "kda",
+      "path": "docs/experiment-engine.md",
+      "content_sha256": "df43506f132289849a0535f932ee7a28cb6505102a9aee925dbcaae03d88dc2e",
+      "role": "Candidate/evaluator interfaces and independent contract boundaries",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-FLOW",
+      "project": "kda",
+      "path": "docs/agent-flow.md",
+      "content_sha256": "46c77a77ca0ad6c626fe319142bda9a69e9490179e9c6b37804fe8ae214989aa",
+      "role": "Natural insertion and re-entry points",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-PROMPT",
+      "project": "kda",
+      "path": "prompts/basic-flow.md",
+      "content_sha256": "a43255204fd66079bd12ffffbeaa621a8869ca4a79e43bc75b03510ccd83ba29",
+      "role": "Existing docs/draft.md design handoff",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-CLI",
+      "project": "kda",
+      "path": "kda_experiments/cli.py",
+      "content_sha256": "fde6668dfb5d2a156bfb891f647bad69b3cf1c0bb7ac983726bdb08fe8b10930",
+      "role": "Registration needs real sources; evidence kinds already defined",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-STUDY",
+      "project": "kda",
+      "path": "planning/attention-study-results.md",
+      "content_sha256": "9ff83b3ebc3153558faa134b9d16a6b8ac41a3f97433ca6cad45abfc74224815",
+      "role": "Scoped historical study, validated alternatives and baseline race",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-DIAGNOSIS",
+      "project": "kda",
+      "path": "runs/attention-decode-study/workspace/docs/profile-diagnosis.md",
+      "content_sha256": "1e75b02f09f9ddb4b4d828929e241a696d2350c42c7218432f668251e30c4b35",
+      "role": "Direct decision record and source attribution before merge revision",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KDA-ATTRIBUTION",
+      "project": "kda",
+      "path": "runs/attention-decode-study/workspace/evidence/merge-attribution.json",
+      "content_sha256": "1ff488923eafd8e5554c4e60c8e732e97c8f2cbe370ca23aaea7e7fefa746381",
+      "role": "Combined change and parent-versus-confirmation comparison limits",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-ROOT",
+      "project": "skills",
+      "path": "cuda/SKILL.md",
+      "content_sha256": "b821b34a890d6081ebf9ad1c83cb4f5345ed6cf51c62342749a4d3a1004905b8",
+      "role": "Current method and operational routing",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-MAD",
+      "project": "skills",
+      "path": "cuda/references/common/machine-aligned-design.md",
+      "content_sha256": "78b489b241c5be8907f36f8f26e70edd39c9d4bfb26e337d0fe7eb0ce693e779",
+      "role": "Strong existing representation-first method: evaluation baseline",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-MECHANICS",
+      "project": "skills",
+      "path": "cuda/references/common/kernel-mechanics.md",
+      "content_sha256": "19a5e76c5c48f27b52a6339582d7ec2d6a85631b2327d8559c1ac3a15a9bc32f",
+      "role": "Fusion, separation, specialization and resource tradeoffs",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-VOLTA",
+      "project": "skills",
+      "path": "cuda/references/architectures/volta/router.md",
+      "content_sha256": "9aefc09ec735eb2676be966fe25c129e83827bdec3e48c85cc1743a5e447d8c7",
+      "role": "Source routing and target-specific scope",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-AMPERE",
+      "project": "skills",
+      "path": "cuda/references/architectures/ampere/router.md",
+      "content_sha256": "ffcb98009108d065a97fc81249074ed9f7b82ab055c24ae2135ccc9f3d4e0b78",
+      "role": "Ampere source routing; not qualification of every linked guide",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-HOPPER",
+      "project": "skills",
+      "path": "cuda/references/architectures/hopper/router.md",
+      "content_sha256": "b1c7653e87202ee3fa71737fcff6767d7507a431d95219896d439df2fc87e613",
+      "role": "Hopper routing; exact mechanisms checked in primary docs",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-BLACKWELL",
+      "project": "skills",
+      "path": "cuda/references/architectures/blackwell/router.md",
+      "content_sha256": "6a25f3c057ca968b2afbac6b6bc5d0d8c08262ca3ba85517220251389b4407ba",
+      "role": "Blackwell and exact target routing",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "CUDA-HOST",
+      "project": "skills",
+      "path": "cuda/references/execution/host-execution.md",
+      "content_sha256": "1eb5e61c26449a7041f4b9967d229baf742fc2b28681b66f6b44be05dde08064",
+      "role": "Current GPU/controller policy, execution versus read boundaries",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-START",
+      "project": "circuit-bending-atlas",
+      "path": "START_HERE.md",
+      "content_sha256": "e1927aa53817452d1d238c2e7beaa77d40c0639a97e80955b36a71614a0e43dd",
+      "role": "Progressive disclosure and evidence/access axes",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-NEED",
+      "project": "circuit-bending-atlas",
+      "path": "NEED_INDEX.md",
+      "content_sha256": "215db32fcec7580875ec05a10543c4af43a317fabbde03f6e81b83da23f81942",
+      "role": "Computational-need to mechanism/composition routes",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-FIELD",
+      "project": "circuit-bending-atlas",
+      "path": "FIELD_GUIDE.md",
+      "content_sha256": "c3b3775ad60eb018a38ce2b761ae90e938788200934a449b88ec22bda5c7d5f0",
+      "role": "Conceptual design substrate and broader mechanisms",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-R05",
+      "project": "circuit-bending-atlas",
+      "path": "reference/R05.md",
+      "content_sha256": "f2e560c3eebb6861e4e0a12d26f4d059f65037b9f8d4febce0cf9ab4b06e1ba7",
+      "role": "Exact native fragment interface versus opaque WMMA",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-R06",
+      "project": "circuit-bending-atlas",
+      "path": "reference/R06.md",
+      "content_sha256": "4b02909469914911d50a73f3128880cec97a2d7f02060a4ae280d98c85718a1c",
+      "role": "Participation, visibility, progress and scope",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-R11",
+      "project": "circuit-bending-atlas",
+      "path": "reference/R11.md",
+      "content_sha256": "60f8d09e5dbcb3c7289f5e02c7f76d12e63e6be4d212de11c018e78689df0ca6",
+      "role": "Whole-lifetime economics and useful work",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-R14",
+      "project": "circuit-bending-atlas",
+      "path": "reference/R14.md",
+      "content_sha256": "c3da6260170366919962bcc777fd043afe92002608957348208f9ada6998f834",
+      "role": "Resource interference and execution scope",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-R15",
+      "project": "circuit-bending-atlas",
+      "path": "reference/R15.md",
+      "content_sha256": "94a646a6424c462fefa594a8f5a8036a04b690f1bdee5175c7973ea8579648df",
+      "role": "Numerical reinterpretation and finite evidence limits",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M06",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M06.md",
+      "content_sha256": "95b65dbdebe589bdace0f61a8de07e5cb5428c4fd61bfac4fb7ec2475c3e1be1",
+      "role": "Bit-sliced persistent state",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M08",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M08.md",
+      "content_sha256": "c1c7f782a188fbc79060499445e976320fec7d09168976ef1202e324b1285915",
+      "role": "Packed integer dots and information loss/range",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M24",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M24.md",
+      "content_sha256": "de346ed0ac3bb590b122b65fdbaacb038e6fc7b4f68b637312f03031dcae4218",
+      "role": "Native bilinear substrate and costs",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M25",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M25.md",
+      "content_sha256": "c16aa57cf3017bda94b163bfb4473fbe7753dbd3791b2e328c02d2090db95d9a",
+      "role": "Fragment-native intermediates",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M37",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M37.md",
+      "content_sha256": "0a75015d1ae8acac074b328b08005646850f25f6fc0ff487e42f7f6c464682a2",
+      "role": "Restricted copy-engine lead; no public arbitrary API",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-M40",
+      "project": "circuit-bending-atlas",
+      "path": "mechanisms/M40.md",
+      "content_sha256": "5e2ca48ec8d802d829c3f5a312307bd0efead8a98fa4b6c99334de9851242588",
+      "role": "Conditional VMM view construction and nonclaims",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C00",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C00.md",
+      "content_sha256": "9ea57a6797b19f6a3b72c2eac3d1176c1ee1459992e8f11310a8b660e8b5db13",
+      "role": "Exact Boolean gates; candidate GPU compositions",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C08",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C08.md",
+      "content_sha256": "cb0fb4411c15d6a21090acaaa2609477efe43ce8c6c42d6c7ecdf44debdd9e1e",
+      "role": "Integer score representation across consumers",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C10",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C10.md",
+      "content_sha256": "dc50f8ec973441824ff369c09810bc9fda8989574c7ec640f61a85aff3d7414c",
+      "role": "Independent small linear maps with real semantic dimensions",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C14",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C14.md",
+      "content_sha256": "1226034fae0abc6b9b1e3a15cd020aa2abde5f53ec98382350b124789734b24a",
+      "role": "Conditional certified filter construction",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C16",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C16.md",
+      "content_sha256": "ab61fbacb88bc3a23424031f5855dcab2ab470b77b7014698362af3ac2edfd47",
+      "role": "Composing producer/consumer ownership",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C31",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C31.md",
+      "content_sha256": "65c43abe76632ee257a43463a9a7d1d142471361c02fe724d98f28916ac8ac36",
+      "role": "Texture interpolation hypothesis and error contributions",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C34",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C34.md",
+      "content_sha256": "2908ff0deef7c068bfe748972d049959eadfd3bdcb622019a7e48fcef2229e58",
+      "role": "Factored phases instead of mandatory megakernel",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C35",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C35.md",
+      "content_sha256": "95d35b71fc7bfe3d2cd005fb3f8b5769f9b0984c8196926dc29649cb9856d321",
+      "role": "Positional identity and metadata removal",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C36",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C36.md",
+      "content_sha256": "66b646b53bede33a83e94e1e997e51315696b4efd6f34d997ddbaa40be8b65c4",
+      "role": "Composite layouts across physical granularities",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C37",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C37.md",
+      "content_sha256": "850872ddaa65ea546c09a8cba110356711d012dbdfa6da5e9a310c711313d8a0",
+      "role": "Carry-save per-position thresholds versus aggregate counts",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-C39",
+      "project": "circuit-bending-atlas",
+      "path": "compositions/C39.md",
+      "content_sha256": "9d01c1b70a4cde8a044155e44c3582f815961fe88f447364f767588e30957496",
+      "role": "Existing representation-changing search procedure",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-E09",
+      "project": "circuit-bending-atlas",
+      "path": "experiments/E09.md",
+      "content_sha256": "fef8e8f5e5a5d99882db398c1e942dbc63bb83d7b35e1977a2bdaa1b84d13a1d",
+      "role": "Tested explicit PTX map versus untested raw WMMA map",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "AT-E39",
+      "project": "circuit-bending-atlas",
+      "path": "experiments/E39.md",
+      "content_sha256": "56f0ed93005a2c351f9d757092817f1116d1deb8efd413a2c3ac6708cdea16f9",
+      "role": "Negative/inconclusive full-lifetime bitplane results",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KW-SKILL",
+      "project": "kernelwiki",
+      "path": "SKILL.md",
+      "content_sha256": "0a5a69cf71b65d3892389c3834d5a4f3b5d1d094fe3197b304deced0c33260e9",
+      "role": "Exact/family retrieval and evidence claims",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KW-ROUTE",
+      "project": "kernelwiki",
+      "path": "references/volta.md",
+      "content_sha256": "a13d35b6d3f9aec2cf742e31d012a93e6c5302a0e2e4ec5291cb971d245ca48a",
+      "role": "Retained cases and new correctness-only GEMM source boundary",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KW-LOWBIT",
+      "project": "kernelwiki",
+      "path": "sources/blogs/volta-grouped-lowbit-measurements.md",
+      "content_sha256": "3c8f38aae70f7d95e22cfbf2751454feef50cd68f2adf15ea28be4204f88fa83",
+      "role": "Group skew, decoding placement/engine confounds and measured reuse",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "KW-RECURRENCE",
+      "project": "kernelwiki",
+      "path": "sources/blogs/volta-recurrence-measurements.md",
+      "content_sha256": "f6b4ec2377cf83cc45a7e3618131dafa57fc52cf2005411ba7a638aa883d5494",
+      "role": "State lifetime benefit with combined causal contributions",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "NCU-SKILL",
+      "project": "ncu-report-skill",
+      "path": "SKILL.md",
+      "content_sha256": "bb1e194942fb1111f073f813fd0eee29c88559d40fda2165d24b6eeccc0cec13",
+      "role": "Profiler workflow and overlapping activation scope",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "NCU-VOLTA",
+      "project": "ncu-report-skill",
+      "path": "reference/10-volta.md",
+      "content_sha256": "4044b08b8c0da107e3e1bf2004979df52989f92797951f043901f4ace9f13b2f",
+      "role": "Supported source attribution and missing-metric semantics",
+      "inspection_scope": "Relevant complete file read; design-source review, not execution",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "PC-PLAN",
+      "project": "project-control",
+      "path": "src/todo_orchestrator/plan.py",
+      "content_sha256": "fde2ca5a4b74ec47dc02d46d1ca9d286c902074f3589d1886988e348243e170d",
+      "role": "Native v3 validation and persisted task fields",
+      "inspection_scope": "Selected ranges 1–405 across source review, including notes/artifact persistence; not full runtime executed",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "PC-GATES",
+      "project": "project-control",
+      "path": "src/todo_orchestrator/gates.py",
+      "content_sha256": "e8c1c9f96810f0d050b080f6f35aa89a5c76fc92c14af77885c4db0c2868474b",
+      "role": "Native gate shape, scope and CUDA admission binding",
+      "inspection_scope": "Selected range 1–220; no gate executed",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "PC-CLI",
+      "project": "project-control",
+      "path": "tests/test_cli_profiles.py",
+      "content_sha256": "5dcea352db40610d6044b7ce850802719bbe8f4c114a8b4d4ffd758bdec38286",
+      "role": "Plan validate/apply CLI grammar",
+      "inspection_scope": "Provider-redacted file; relevant plan tests readable; hash is original source identity, not a hash of redacted emitted text",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    },
+    {
+      "id": "PC-APPLY",
+      "project": "project-control",
+      "path": "tests/test_plan_apply.py",
+      "content_sha256": "b8c1e9e8673a59cd0030227ff337dced719d66f9d906f1e9fd368295ce79e5ee",
+      "role": "Nonmutating native validation, stale rejection and UUID preservation",
+      "inspection_scope": "File read in preceding design review; tests not executed here",
+      "observed_date": "2026-10-18",
+      "revision_note": "Working-tree source identity; not a claim that all files share one commit"
+    }
+  ]
+}

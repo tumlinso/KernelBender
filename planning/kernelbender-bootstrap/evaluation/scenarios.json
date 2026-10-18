@@ -1,0 +1,105 @@
+{
+  "status": "specification_only_not_executed",
+  "comparison": "Current competent KDA+CUDA+Atlas+KernelWiki+NCU versus same stack plus KernelBender",
+  "holdout_policy": "Independent evaluator creates withheld cases/transcripts; do not install this file as skill context.",
+  "scenarios": [
+    {
+      "id": "KB-E01",
+      "name": "Consumer information versus conventional intermediate",
+      "solver_brief": "A stream of queries runs two fixed linear maps. Only a small final output is needed. Design for parameter epochs with changing query counts; use the stated numerical contract.",
+      "variants": [
+        "Only final output, reassociation allowed within declared error",
+        "Intermediate is externally required or exactly rounded before the consumer",
+        "Parameters update every query versus long epochs"
+      ],
+      "reviewer_checks": [
+        "Finds consumer-specific elimination/preparation when legal, without requiring it as the sole answer",
+        "Identifies intermediate rounding and visibility as constraints",
+        "Accounts for update, preparation, footprint and output costs"
+      ],
+      "role": "development probe; numerical native-pilot family can be varied independently"
+    },
+    {
+      "id": "KB-E02",
+      "name": "Categorical or per-position mask computation",
+      "solver_brief": "Many local instances obey the same bounded discrete transition or threshold rule. Inputs and required outputs are explicitly described. Propose a representation over a multi-stage workflow.",
+      "variants": [
+        "Inputs and consumers accept packed masks",
+        "Scalar input and every-step scalar output required",
+        "Rule or topology changes between epochs"
+      ],
+      "reviewer_checks": [
+        "Preserves per-position output versus aggregate count",
+        "Considers an actual Boolean/packed construction rather than merely naming bitsets",
+        "Pays transposes, neighbor routing, boundary masks and update costs"
+      ],
+      "role": "development probe; Boolean native-pilot family can be varied independently"
+    },
+    {
+      "id": "KB-E03",
+      "name": "Reuse claim under changing ownership",
+      "solver_brief": "A packed parameter is used by two consumers with different preferred layouts. Evaluate predecode, shared preparation and local consumption under explicit update and concurrent-use rules.",
+      "variants": [
+        "Long immutable epoch",
+        "Frequent updates",
+        "Strict decoded-value rounding and changing scales"
+      ],
+      "reviewer_checks": [
+        "Does not infer weights are immutable from benchmark reuse",
+        "Tracks concurrent ownership and invalidation",
+        "Does not claim all direct decoding is inferior from one SIMT measurement",
+        "Explains arithmetic-engine versus decoding-location confounding"
+      ],
+      "role": "design-only boundary probe"
+    },
+    {
+      "id": "KB-E04",
+      "name": "Architecture and reachability contrast",
+      "solver_brief": "A design uses a specialized transfer, tensor or dynamic-programming mechanism. Adapt it to the explicitly provided GPU/toolchain and permitted API.",
+      "variants": [
+        "Supported newer-GPU native mechanism",
+        "V100 target with that intrinsic emulated or instruction unavailable",
+        "Driver-header-only route with no permitted application interface"
+      ],
+      "reviewer_checks": [
+        "Transfers computational intent without claiming identical native instruction availability",
+        "Preserves participant, precision and access scope",
+        "Returns a public alternative or a precise feasibility question rather than fictional code"
+      ],
+      "role": "design-only portability/access probe"
+    },
+    {
+      "id": "KB-E05",
+      "name": "Measured bottleneck with an untested causal explanation",
+      "solver_brief": "An existing composed kernel loses to a baseline; sparse counters and timing show a divergence. Propose the next design or experiment using only the provided evidence.",
+      "variants": [
+        "Low useful parallelism and a dependent consumer",
+        "Lower bytes but higher conversion/issue cost",
+        "Known correctness race in the baseline"
+      ],
+      "reviewer_checks": [
+        "Separates observation, hypothesis and supported attribution",
+        "Proposes a controlled consequential test instead of a wall of guesses",
+        "Repairs/excludes unsafe baseline for fresh comparison",
+        "Does not use replay durations as normal timing"
+      ],
+      "role": "design-only diagnosis-to-construction probe; do not reuse the known attention winner as a novelty test"
+    },
+    {
+      "id": "KB-E06",
+      "name": "Strong conventional control",
+      "solver_brief": "Implement a regular dense operator with arbitrary inputs, no special reusable structure and a strong verified library baseline. The objective and allowed numerical behavior are fixed.",
+      "variants": [
+        "Ordinary request",
+        "Explicit request to reconsider formulation"
+      ],
+      "reviewer_checks": [
+        "Retains library/conventional route when justified",
+        "An explicit rethink receives consideration but not mandatory exotic code",
+        "No invented sparsity, value specialization or silent precision changes",
+        "Design overhead is recorded"
+      ],
+      "role": "native-pilot control"
+    }
+  ]
+}

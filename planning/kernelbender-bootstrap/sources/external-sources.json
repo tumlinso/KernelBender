@@ -1,0 +1,149 @@
+{
+  "note": "These sources motivate design choices. None validates KernelBender itself. Benchmarks/claims from external papers were not reproduced and no general speedup is borrowed.",
+  "sources": [
+    {
+      "id": "STEPBACK",
+      "title": "Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models",
+      "url": "https://arxiv.org/abs/2310.06117",
+      "accessed_date": "2026-10-18",
+      "use": "Evidence for an abstraction intervention in studied tasks, not a GPU-kernel efficacy result",
+      "inspection_scope": "Primary abstract/metadata; attempted HTML was unavailable",
+      "kind": "primary source"
+    },
+    {
+      "id": "ANALOGY",
+      "title": "Large Language Models as Analogical Reasoners",
+      "url": "https://arxiv.org/abs/2310.01714",
+      "accessed_date": "2026-10-18",
+      "use": "Structural/task-relevant analogy as design motivation; examples need grounding",
+      "inspection_scope": "Primary abstract and available article text framing",
+      "kind": "primary source"
+    },
+    {
+      "id": "IDEAS",
+      "title": "Can LLMs Generate Novel Research Ideas?",
+      "url": "https://arxiv.org/html/2409.04109v1",
+      "accessed_date": "2026-10-18",
+      "use": "Separate novelty, feasibility, diversity and implemented outcomes",
+      "inspection_scope": "Abstract, methods framing and sections 7/10 on diversity, self-evaluation and limitations",
+      "kind": "primary source"
+    },
+    {
+      "id": "SELFCORRECT",
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "url": "https://arxiv.org/abs/2310.01798",
+      "accessed_date": "2026-10-18",
+      "use": "External checks instead of self-approval as correctness evidence",
+      "inspection_scope": "Primary abstract; scoped to reported models and tasks",
+      "kind": "primary source"
+    },
+    {
+      "id": "FUNSEARCH",
+      "title": "FunSearch: Making new discoveries in mathematical sciences using Large Language Models",
+      "url": "https://deepmind.google/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/",
+      "accessed_date": "2026-10-18",
+      "use": "Candidate generation plus external evaluation; no new search engine required here",
+      "inspection_scope": "Author/institution explanation; associated Nature paper identified, full Nature page fetch failed",
+      "kind": "primary source"
+    },
+    {
+      "id": "MIRAGE",
+      "title": "Mirage: A Multi-Level Superoptimizer for Tensor Programs",
+      "url": "https://arxiv.org/html/2405.05751v3",
+      "accessed_date": "2026-10-18",
+      "use": "Joint algebra, schedule and custom-kernel formulation; formal guarantees do not transfer automatically",
+      "inspection_scope": "Article framing, representation/verification scope; no local reproduction",
+      "kind": "primary source"
+    },
+    {
+      "id": "PRISM",
+      "title": "Prism: Symbolic Superoptimization of Tensor Programs",
+      "url": "https://arxiv.org/abs/2604.15272",
+      "accessed_date": "2026-10-18",
+      "use": "Symbolic design families versus parameter instantiation",
+      "inspection_scope": "Primary abstract only; HTML fetch unavailable, not an implementation audit",
+      "kind": "primary source"
+    },
+    {
+      "id": "FLASH",
+      "title": "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness",
+      "url": "https://arxiv.org/abs/2205.14135",
+      "accessed_date": "2026-10-18",
+      "use": "IO-aware elimination of conventional intermediates",
+      "inspection_scope": "Primary abstract/algorithm framing, no new reproduction",
+      "kind": "primary source"
+    },
+    {
+      "id": "NAPKIN",
+      "title": "FlashAttention on a Napkin: A Diagrammatic Approach to Deep Learning IO-Awareness",
+      "url": "https://arxiv.org/html/2412.03317v1",
+      "accessed_date": "2026-10-18",
+      "use": "Composition/resource diagrams as optional reasoning aid, not a required diagram system",
+      "inspection_scope": "HTML article framing and methodology",
+      "kind": "primary source"
+    },
+    {
+      "id": "SKILLS-SPEC",
+      "title": "Agent Skills Specification",
+      "url": "https://agentskills.io/specification",
+      "accessed_date": "2026-10-18",
+      "use": "Portable SKILL.md metadata and progressive disclosure",
+      "inspection_scope": "Frontmatter, resources, progressive disclosure and validation sections",
+      "kind": "primary source"
+    },
+    {
+      "id": "OPENAI-SKILLS",
+      "title": "OpenAI: Build skills",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "accessed_date": "2026-10-18",
+      "use": "Explicit/implicit loading and instruction-only skill packaging",
+      "inspection_scope": "Official docs, followed from developers.openai.com/codex/skills; activation and format sections",
+      "kind": "primary source"
+    },
+    {
+      "id": "PTX",
+      "title": "NVIDIA PTX ISA 8.8, CUDA 12.9.1 archive",
+      "url": "https://docs.nvidia.com/cuda/archive/12.9.1/parallel-thread-execution/index.html",
+      "accessed_date": "2026-10-18",
+      "use": "Exact instruction target/semantics source; not every instruction reaudited",
+      "inspection_scope": "Version identity and relevant documented primitive contracts, complemented by local source study",
+      "kind": "primary source"
+    },
+    {
+      "id": "AMPERE",
+      "title": "NVIDIA Ampere Tuning Guide, CUDA 12.9.1 archive",
+      "url": "https://docs.nvidia.com/cuda/archive/12.9.1/ampere-tuning-guide/index.html",
+      "accessed_date": "2026-10-18",
+      "use": "Asynchronous staging changes design economics",
+      "inspection_scope": "Relevant architecture tuning sections",
+      "kind": "primary source"
+    },
+    {
+      "id": "HOPPER",
+      "title": "NVIDIA Hopper Tuning Guide, CUDA 12.3.2 archive",
+      "url": "https://docs.nvidia.com/cuda/archive/12.3.2/hopper-tuning-guide/index.html",
+      "accessed_date": "2026-10-18",
+      "use": "TMA, cluster scope and DPX as generation-specific design contrasts",
+      "inspection_scope": "Relevant primary-source tuning excerpts; no hardware run",
+      "kind": "primary source"
+    },
+    {
+      "id": "BLACKWELL",
+      "title": "NVIDIA Blackwell Tuning Guide, CUDA 12.9.1 archive",
+      "url": "https://docs.nvidia.com/cuda/archive/12.9.1/blackwell-tuning-guide/index.html",
+      "accessed_date": "2026-10-18",
+      "use": "Exact-generation grounding instead of transplanting an old pipeline",
+      "inspection_scope": "Relevant architecture tuning guide and linked PTX context",
+      "kind": "primary source"
+    },
+    {
+      "id": "CUDA-PROGRAMMING",
+      "title": "NVIDIA CUDA C++ Programming Guide, CUDA 12.9.1 archive",
+      "url": "https://docs.nvidia.com/cuda/archive/12.9.1/cuda-c-programming-guide/index.html",
+      "accessed_date": "2026-10-18",
+      "use": "Public memory/collective and arithmetic support; native versus emulated intrinsic distinction",
+      "inspection_scope": "Relevant primary documentation excerpts; not a full-document audit",
+      "kind": "primary source"
+    }
+  ]
+}
