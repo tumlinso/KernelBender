@@ -9,6 +9,16 @@
       "run_state_sha256": "ebe7f79e160aafd06284b458cd83adf778aedbb7ab9e99ce8a57657a66656f56",
       "failure": "Controller rejected binary_paths before GPU admission; all three families blocked at baseline qualification. No candidate algorithm altered.",
       "gpu_workload_started": false
+    },
+    {
+      "run_id": "kb-native-pilot-r2",
+      "state": "failed",
+      "driver_sha256": "960ff68d32e11c0c88970fc856181c2d03cc72c3851ab1e35aa4f410f390a3ca",
+      "run_state_path": "/home/tumlinson/KernelBender/runs/kernelbender-pilot/native-v1/kb-native-pilot-r2/run.json",
+      "run_state_sha256": "58021f2edb41d7e8e7c7f7a73724a227bb2b4bf5def20f3470efc70e217b9c7a",
+      "failure": "Root selected /usr/bin/python3 without NumPy. Controller admission and sanitizer launch succeeded; runner exited before first instrumented CUDA API. Correct runtime is existing Miniconda Python3 with NumPy2.2.6.",
+      "gpu_workload_started": false,
+      "controller_admitted": true
     }
   ]
 }
