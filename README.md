@@ -6,6 +6,8 @@ The portable instruction/reference skill is implemented and remains optional and
 
 The Atlas consolidation adds a [problem-first opportunity library](skills/kernelbender/references/opportunity-index.md), four affordance families, eight composition families, and an [exact KernelWiki contract map](skills/kernelbender/references/wiki-contracts.md), behind the existing ten bridges. Its [migration crosswalk](planning/atlas-consolidation/CROSSWALK.md), [coverage report](planning/atlas-consolidation/COVERAGE.md), [provenance](planning/atlas-consolidation/PROVENANCE.md), and [validation report](planning/atlas-consolidation/VALIDATION.md) distinguish authored constructions, machine contracts, bounded observations, and remaining gaps. The original Atlas and CUDA skill remain intact and authoritative source material. New [design fixtures](evaluation/atlas-consolidation/blind-fixtures.md) and CPU/retrieval checks qualify the expanded content; they do not extend the earlier native pilot's performance or skill-effectiveness claims.
 
+See the [consolidation handoff](planning/atlas-consolidation/HANDOFF.md) for exact independently versioned component revisions and optional KDA pin updates. No KDA dependency was changed by this migration.
+
 ## Relationship to related work
 
 KernelBender is intended to complement:
