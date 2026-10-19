@@ -1,6 +1,10 @@
 # Sources and confidence boundaries
 
-Use these locators only when their contract or evidence changes the next decision. Local workspace paths refer to the independent sources, not bundled copies. A source can be read directly without invoking an agentic skill/investigator tool.
+Use these locators only when their contract or evidence changes the next decision. Local workspace paths refer to the independent sources, not bundled copies. A source can be read directly without invoking an agentic skill/investigator tool. KernelBender carries authored synthesis and original Atlas IDs, not copied Atlas text or artifacts.
+
+## Atlas identity
+
+The Atlas checkout is not redistributed here. Its current source identity is the stable Git revision below; if a checkout is available, inspect a card with `git -C <atlas-checkout> show 5b5629b001da4a42d6f41a84d94f73c07a29d478:mechanisms/M06.md` (substitute the exact card path).
 
 | Key | Workspace / path |
 |---|---|
@@ -46,6 +50,7 @@ Use these locators only when their contract or evidence changes the next decisio
 | AT-C39 | `circuit-bending-atlas` / `compositions/C39.md` |
 | AT-E09 | `circuit-bending-atlas` / `experiments/E09.md` |
 | AT-E39 | `circuit-bending-atlas` / `experiments/E39.md` |
+| ATLAS5B5629B | `circuit-bending-atlas` / checkout `5b5629b001da4a42d6f41a84d94f73c07a29d478`; original Atlas IDs listed beside each synthesis |
 | KW-SKILL | `kernelwiki` / `SKILL.md` |
 | KW-ROUTE | `kernelwiki` / `references/volta.md` |
 | KW-LOWBIT | `kernelwiki` / `sources/blogs/volta-grouped-lowbit-measurements.md` |

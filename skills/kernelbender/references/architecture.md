@@ -6,6 +6,8 @@ A computational design has two parts: the operator-preserving transformation and
 
 For each unusual mechanism establish: exact target and toolchain; operation/operand/output semantics; participant and memory scope; accessible API or permitted instruction form; resource/lifetime constraints; and the status of local evidence. Prefer KernelWiki's architecture-filtered pages and primary source target notes. Query the actual device/toolchain in the implementation environment instead of copying historical ordinals or SKU assumptions.
 
+Use the exact page IDs and query/fetch commands in [KernelWiki contract routing](wiki-contracts.md). In particular, `hw-volta-mma` and its E09 evidence page distinguish a documented explicit PTX coordinate map from the opaque raw layout of WMMA fragments. Keep the exact hardware fact in KernelWiki and the operator mapping in the selected KernelBender construction.
+
 Unknown details can become a small feasibility test. Do not invent register-bank hashes, lane maps, cache coherence, native arithmetic modes or a path to a driver-only engine. Source-level annotation is not proof that state remains in registers. A public primitive can still be a poor economic fit.
 
 ## Generational contrasts that change a design
@@ -13,13 +15,13 @@ Unknown details can become a small feasibility test. Do not invent register-bank
 | Target context | Consequence for the design question |
 |---|---|
 | Volta/V100 SM70 | Explicit half-input MMA/WMMA and ordinary register/shared-memory staging are viable substrates. Native fragment contracts and full-warp participation matter. Keep raw WMMA storage opaque unless independently established. Do not import newer asynchronous copy, warp-group, TMA or TMEM semantics. |
-| Ampere, exact supported target | Hardware-accelerated asynchronous global-to-shared copies can change the register/staging tradeoff. Revisit the pipeline and error/precision contract rather than transplanting Volta tile choices. |
+| Ampere, exact supported target | `hw-ampere-async-copy` defines the SM80 cp.async route, eligibility and waits; Tensor Core and shared/L2 changes have separate pages. Revisit the pipeline and error/precision contract rather than transplanting Volta tile choices. |
 | Hopper, exact supported target | TMA and cluster/DSM scope can change movement and ownership; DPX can make eligible integer min/max/add recurrences a distinct arithmetic candidate. A cluster is not an arbitrary whole-grid synchronization contract. |
 | Blackwell, exact supported target | Different tensor/accumulator mechanisms and target-specific instructions can move the representation boundary again. Consult the actual PTX/KernelWiki contract, including architecture-suffix requirements. Do not treat every Blackwell product or older toolchain as interchangeable. |
 
 These are source-backed orientation contrasts, **not local execution qualifications of KernelBender on all generations**. [AT-R05, AT-R06, AMPERE, HOPPER, BLACKWELL, PTX]
 
-The initial bridge corpus is deepest on Volta because that is where the existing experiments are. Its method should still reason from a different GPU's supported mechanisms. When another target changes the cost or legal scope, adapt the construction and test it; do not clone the entire skill or promise portability of a successful binary.
+The initial bridge corpus is deepest on Volta because that is where the existing experiments are. Its method should still reason from a different GPU's supported mechanisms. When another target changes the cost or legal scope, adapt the construction and test it; do not clone the entire skill or promise portability of a successful binary. Ampere pointers in the opportunity library identify an architecture route, not an SM70 option.
 
 ## Three examples of evidence boundaries
 

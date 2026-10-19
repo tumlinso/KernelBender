@@ -25,7 +25,7 @@ Use [caller and lifetime questions](references/caller.md) for missing details. R
 
 ## Connect a few relevant mechanisms
 
-Use the [need map](references/need-map.md). Choose material by computational structure, not only by an operator name. Do not load every card or fill a quota of ideas.
+Use the [need map](references/need-map.md). When the ten bridges do not provide enough technical substrate, use the [problem-first opportunity index](references/opportunity-index.md) to open one relevant affordance and, if useful, one construction. Do not load every card or fill a quota of ideas. The library is a source of candidates, not a mandate to use exotic hardware.
 
 | Open design choice | Bridge |
 |---|---|
@@ -41,6 +41,8 @@ Use the [need map](references/need-map.md). Choose material by computational str
 | Move full payloads or change a permitted information boundary? | [Boundaries and views](references/bridges/boundaries.md) |
 
 Use [architecture grounding](references/architecture.md) to check exact target, primitive, participation and access. A cross-domain or cross-generation analogy must explain the operator-preserving correspondence and what does **not** transfer. You may propose unlisted mechanisms when useful; source or test their contract instead of inventing hardware behavior. Restricted Atlas ideas remain research leads unless separately authorized.
+
+The [KernelWiki contract map](references/wiki-contracts.md) gives exact page IDs for architecture and evidence retrieval. KernelBender cards hold the computational construction; KernelWiki owns exact instruction, layout, numerical, memory and synchronization facts.
 
 ## Construct a small set of genuinely different designs
 
@@ -64,6 +66,6 @@ Re-enter only when evidence or the caller's constraints materially change. Prese
 
 ## Concrete examples and sources
 
-[Consumer-specific projection](examples/consumer-projection.md), [per-position mask thresholds](examples/mask-threshold.md), [attention merge diagnosis](examples/attention-merge.md), and [decoding versus preparation](examples/lowbit-lifetime.md) illustrate different uses and failure boundaries. They are examples, not an exhaustive design vocabulary.
+[Consumer-specific projection](examples/consumer-projection.md), [per-position mask thresholds](examples/mask-threshold.md), [attention merge diagnosis](examples/attention-merge.md), [decoding versus preparation](examples/lowbit-lifetime.md), and the [dense-library control](examples/dense-library-control.md) illustrate different uses and failure boundaries. They are examples, not an exhaustive design vocabulary.
 
 [Source locators and evidence boundaries](references/sources.md) identify the continuing CUDA skill, Atlas, KernelWiki, ncu-report-skill, KDA study and external primary references. These sources inform the design; they do not override task or host policy.

@@ -1,5 +1,7 @@
 # Enter through the computation
 
+This table routes to the ten compact bridges. For the wider mechanism and construction library, follow [problem-first opportunities](opportunity-index.md); open only the card needed for the present choice.
+
 | Structural clue | Start with | Then test the limiting boundary |
 |---|---|---|
 | The next stage uses only a small statistic of a large intermediate | `bridges/demand.md` | Intermediate rounding, nonlinearities and external observability |

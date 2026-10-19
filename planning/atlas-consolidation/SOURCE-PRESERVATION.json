@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-19",
+  "method": "SHA-256 per tracked regular file, then canonical sorted path-to-digest JSON; compare Git porcelain state separately",
+  "repositories": [
+    {
+      "repository": "Atlas",
+      "source_path": "/home/tumlinson/gpu_circuit_bending_atlas",
+      "head": "5b5629b001da4a42d6f41a84d94f73c07a29d478",
+      "tracked_regular_files_checked": 286,
+      "before_manifest_sha256": "d9392319f19ad93bf12d3c6c091f5743dca40add39175586f3796906313ffefa",
+      "after_manifest_sha256": "d9392319f19ad93bf12d3c6c091f5743dca40add39175586f3796906313ffefa",
+      "changed_files": [],
+      "git_status_unchanged": true
+    },
+    {
+      "repository": "CUDA installed",
+      "source_path": "/home/tumlinson/.agents/skills",
+      "head": "0a6fab0ef005264a15b7c4d7b3cbb842bfdddfdf",
+      "tracked_regular_files_checked": 830,
+      "before_manifest_sha256": "188b2273616b4c226d4a0cb1f82b4633e6886737b89b7435f1d387ebe6ff23d0",
+      "after_manifest_sha256": "188b2273616b4c226d4a0cb1f82b4633e6886737b89b7435f1d387ebe6ff23d0",
+      "changed_files": [],
+      "git_status_unchanged": true
+    },
+    {
+      "repository": "CUDA source",
+      "source_path": "/home/tumlinson/skills_dev",
+      "head": "bfa9238985dfeb2368bad076f1cc51bfdadbae92",
+      "tracked_regular_files_checked": 1909,
+      "before_manifest_sha256": "7aec99072f5ada2ddbef7752d02716a8cd3bd479039f8676f7ef94783f1d61fe",
+      "after_manifest_sha256": "7aec99072f5ada2ddbef7752d02716a8cd3bd479039f8676f7ef94783f1d61fe",
+      "changed_files": [],
+      "git_status_unchanged": true
+    },
+    {
+      "repository": "KDA",
+      "source_path": "/home/tumlinson/kda",
+      "head": "e1246674c5cbd47f5b535e21918b785a78a11363",
+      "tracked_regular_files_checked": 68,
+      "before_manifest_sha256": "51554e8817903c9350203e6352123560450d5a29f8ba97a466e03835100dd329",
+      "after_manifest_sha256": "51554e8817903c9350203e6352123560450d5a29f8ba97a466e03835100dd329",
+      "changed_files": [],
+      "git_status_unchanged": true
+    }
+  ]
+}
